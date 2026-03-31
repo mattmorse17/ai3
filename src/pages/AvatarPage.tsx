@@ -21,13 +21,13 @@ const avatarData: Record<string, AvatarData> = {
   church: {
     title: 'Churches & Ministries',
     headline: 'One message.\nEvery heart.\nPersonally.',
-    subheadline: 'AI3 for Churches',
+    subheadline: 'AI³ for Churches',
     heroDescription: 'Your pastor\'s message is powerful. But it hits different for a new believer, a grieving parent, and a skeptical teenager. What if every person in your congregation received the message they specifically needed — without changing a word of the sermon?',
     actual: {
       title: 'Your Pastor\'s Heart',
       points: [
         'The sermon, the theology, the pastoral care — this is irreplaceable',
-        'AI3 doesn\'t write your sermons. It makes sure every word lands exactly where it needs to',
+        'AI³ doesn\'t write your sermons. It makes sure every word lands exactly where it needs to',
         'Your congregation feels personally known — because the system knows them',
       ],
     },
@@ -48,13 +48,13 @@ const avatarData: Record<string, AvatarData> = {
         'Giving campaigns that speak to each person\'s specific connection to the mission',
       ],
     },
-    result: 'Imagine a church where every single person feels like the pastor is speaking directly to them. Where no visitor falls through the cracks. Where your message reaches 10x more people — each one personally. That\'s AI3.',
+    result: 'Imagine a church where every single person feels like the pastor is speaking directly to them. Where no visitor falls through the cracks. Where your message reaches 10x more people — each one personally. That\'s AI³.',
   },
   sports: {
     title: 'Sports Coaches',
     headline: 'Recruit smarter.\nDevelop faster.\nWin more.',
-    subheadline: 'AI3 for Sports',
-    heroDescription: 'The best coaches already have the eye. The philosophy. The ability to develop players. But there aren\'t enough hours to recruit, scout, develop, and game-plan at the level your program demands. AI3 gives you a staff that never sleeps.',
+    subheadline: 'AI³ for Sports',
+    heroDescription: 'The best coaches already have the eye. The philosophy. The ability to develop players. But there aren\'t enough hours to recruit, scout, develop, and game-plan at the level your program demands. AI³ gives you a staff that never sleeps.',
     actual: {
       title: 'Your Coaching Philosophy',
       points: [
@@ -80,18 +80,18 @@ const avatarData: Record<string, AvatarData> = {
         'NIL support and compliance documentation handled automatically',
       ],
     },
-    result: 'The programs that win in the next decade won\'t just have the best coaches. They\'ll have the best intelligence systems. AI3 gives your program a competitive advantage that compounds every single day.',
+    result: 'The programs that win in the next decade won\'t just have the best coaches. They\'ll have the best intelligence systems. AI³ gives your program a competitive advantage that compounds every single day.',
   },
   performance: {
     title: 'Mental Performance Coaches',
     headline: 'Scale your methodology.\nNot your hours.',
-    subheadline: 'AI3 for Mental Performance',
-    heroDescription: 'You\'ve spent decades developing a methodology that transforms athletes and executives. But you can only be in one room at a time. AI3 lets your framework reach thousands — each one getting a personalized experience as powerful as 1-on-1 coaching.',
+    subheadline: 'AI³ for Mental Performance',
+    heroDescription: 'You\'ve spent decades developing a methodology that transforms athletes and executives. But you can only be in one room at a time. AI³ lets your framework reach thousands — each one getting a personalized experience as powerful as 1-on-1 coaching.',
     actual: {
       title: 'Your Framework',
       points: [
         'Your mental performance system is the foundation — the irreplaceable core',
-        'AI3 encodes your methodology so deeply that clients feel YOUR coaching, not generic advice',
+        'AI³ encodes your methodology so deeply that clients feel YOUR coaching, not generic advice',
         'Every visualization, every routine, every framework — delivered your way',
       ],
     },
@@ -112,18 +112,18 @@ const avatarData: Record<string, AvatarData> = {
         'Lead gen and client acquisition that runs while you sleep',
       ],
     },
-    result: 'The world\'s best mental performance coaches are limited by time. AI3 removes that constraint. Your methodology reaches 100x more people — each one getting an experience that feels like you\'re right there with them.',
+    result: 'The world\'s best mental performance coaches are limited by time. AI³ removes that constraint. Your methodology reaches 100x more people — each one getting an experience that feels like you\'re right there with them.',
   },
   influencer: {
     title: 'Influencers & Creators',
     headline: 'Your voice.\nEvery platform.\nAuthentically.',
-    subheadline: 'AI3 for Creators',
-    heroDescription: 'Your audience follows YOU — your voice, your personality, your perspective. But the demands of content creation, brand deals, DMs, and community management are crushing. AI3 amplifies your authentic voice across every platform without diluting it.',
+    subheadline: 'AI³ for Creators',
+    heroDescription: 'Your audience follows YOU — your voice, your personality, your perspective. But the demands of content creation, brand deals, DMs, and community management are crushing. AI³ amplifies your authentic voice across every platform without diluting it.',
     actual: {
       title: 'Your Authentic Voice',
       points: [
         'Your personality, your takes, your creative instincts — this is what people follow',
-        'AI3 learns how you think, speak, and create — then amplifies it',
+        'AI³ learns how you think, speak, and create — then amplifies it',
         'Nothing goes out that doesn\'t sound like you, because the system IS trained on you',
       ],
     },
@@ -144,18 +144,18 @@ const avatarData: Record<string, AvatarData> = {
         'Community building that turns casual followers into paying superfans',
       ],
     },
-    result: 'The creators who win aren\'t the ones who post the most. They\'re the ones whose authentic voice reaches the most people. AI3 gives you a media team that runs on your creative DNA.',
+    result: 'The creators who win aren\'t the ones who post the most. They\'re the ones whose authentic voice reaches the most people. AI³ gives you a media team that runs on your creative DNA.',
   },
   business: {
     title: 'Business Owners',
     headline: 'Run your company\nwith a fleet of\nAI operators.',
-    subheadline: 'AI3 for Business',
-    heroDescription: 'You started your business to build something — not to be trapped managing every detail. AI3 gives you a named fleet of AI operators that run your marketing, sales, fulfillment, and support so you can focus on what only you can do.',
+    subheadline: 'AI³ for Business',
+    heroDescription: 'You started your business to build something — not to be trapped managing every detail. AI³ gives you a named fleet of AI operators that run your marketing, sales, fulfillment, and support so you can focus on what only you can do.',
     actual: {
       title: 'Your Vision & Expertise',
       points: [
         'You know your market, your customers, and your competitive advantage',
-        'AI3 encodes that knowledge into agents that make decisions the way you would',
+        'AI³ encodes that knowledge into agents that make decisions the way you would',
         'The strategic thinking stays with you. The execution runs itself.',
       ],
     },
@@ -176,20 +176,20 @@ const avatarData: Record<string, AvatarData> = {
         'Support agents that resolve 80% of issues without human intervention',
       ],
     },
-    result: 'The next generation of businesses won\'t have bigger teams. They\'ll have smarter systems. AI3 is the operating layer that lets a 5-person company operate like a 50-person one.',
+    result: 'The next generation of businesses won\'t have bigger teams. They\'ll have smarter systems. AI³ is the operating layer that lets a 5-person company operate like a 50-person one.',
     caseStudyName: 'Kaifect',
-    caseStudyQuote: 'A marketing agency running 50+ clients with AI3 as its operating system — proving the model works before we ever sold it as a product.',
+    caseStudyQuote: 'A marketing agency running 50+ clients with AI³ as its operating system — proving the model works before we ever sold it as a product.',
   },
   creator: {
     title: 'Chaotic Creators',
     headline: '100 ideas a day?\nNow they all\nget executed.',
-    subheadline: 'AI3 for Creators Who Can\'t Sit Still',
-    heroDescription: 'Your brain moves at 1,000 mph. You have more ideas before breakfast than most people have all year. The problem was never creativity — it was execution. AI3 is the bridge between your vision and reality.',
+    subheadline: 'AI³ for Creators Who Can\'t Sit Still',
+    heroDescription: 'Your brain moves at 1,000 mph. You have more ideas before breakfast than most people have all year. The problem was never creativity — it was execution. AI³ is the bridge between your vision and reality.',
     actual: {
       title: 'Your Raw Creative Energy',
       points: [
         'The rapid-fire thinking, the connections no one else sees, the relentless drive',
-        'AI3 doesn\'t slow you down with process — it keeps up with you',
+        'AI³ doesn\'t slow you down with process — it keeps up with you',
         'Voice memo in, executed project out. That\'s the workflow.',
       ],
     },
@@ -210,7 +210,7 @@ const avatarData: Record<string, AvatarData> = {
         'A system that matches your pace — finally',
       ],
     },
-    result: 'You were never the problem. The world just couldn\'t keep up with you. AI3 can. Every idea gets executed. Every project gets shipped. Every vision becomes reality.',
+    result: 'You were never the problem. The world just couldn\'t keep up with you. AI³ can. Every idea gets executed. Every project gets shipped. Every vision becomes reality.',
   },
 }
 
@@ -241,7 +241,7 @@ export default function AvatarPage() {
         <div className="relative max-w-4xl mx-auto text-center">
           <Link to="/" className="inline-flex items-center gap-1 text-sm text-text-muted hover:text-white transition-colors mb-8 no-underline">
             <ArrowLeft size={16} />
-            Back to AI3
+            Back to AI³
           </Link>
 
           <motion.p
@@ -354,10 +354,10 @@ export default function AvatarPage() {
               Ready to see it in action?
             </h2>
             <p className="text-text-secondary text-lg mb-10">
-              Join the waitlist for early access to Now and Move — the products that power AI3.
+              Join the waitlist for early access to Now and Move — the products that power AI³.
             </p>
             <a
-              href="mailto:hello@kaifect.com?subject=AI3 Interest — {data.title}"
+              href="mailto:hello@kaifect.com?subject=AI³ Interest — {data.title}"
               className="inline-flex items-center gap-2 px-10 py-4 text-lg font-semibold text-white bg-gradient-to-r from-gradient-start to-gradient-end hover:opacity-90 rounded-full transition-all no-underline glow"
             >
               Get Early Access

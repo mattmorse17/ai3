@@ -6,7 +6,7 @@ const pillars = [
     icon: Brain,
     label: 'Actual Intelligence',
     tagline: 'The Human Edge',
-    description: 'Your expertise. Your intuition. Your relationships. The 10,000 hours that make a coach a great coach, a pastor a great pastor, a creator a great creator. No model can replicate what you know. AI3 doesn\'t try to — it amplifies it.',
+    description: 'Your expertise. Your intuition. Your relationships. The 10,000 hours that make a coach a great coach, a pastor a great pastor, a creator a great creator. No model can replicate what you know. AI³ doesn\'t try to — it amplifies it.',
     examples: [
       'A coach\'s philosophy becomes the DNA of every agent in their system',
       'A pastor\'s message adapts to every individual — without losing the heart',
@@ -22,7 +22,7 @@ const pillars = [
     tagline: 'The Capability Layer',
     description: 'Language models. Vision systems. Reasoning engines. The world\'s most powerful AI models are commodities — everyone has access to the same ones. The question isn\'t which model you use. It\'s how intelligently you orchestrate them.',
     examples: [
-      'AI3 doesn\'t build models — we build the orchestration layer',
+      'AI³ doesn\'t build models — we build the orchestration layer',
       'Like Perplexity built the best search without building a single model',
       'The right model for the right task at the right time — automatically',
     ],
@@ -67,7 +67,7 @@ export default function Thesis() {
           <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
             Everyone has access to the same AI. So why do most businesses still get nothing from it?
             Because there's a massive gap between "AI exists" and "AI works for my business."
-            That gap is an orchestration problem. AI3 closes it by fusing three distinct intelligences
+            That gap is an orchestration problem. AI³ closes it by fusing three distinct intelligences
             into one system.
           </p>
         </motion.div>
@@ -86,7 +86,7 @@ export default function Thesis() {
           <span className="text-2xl sm:text-4xl font-black text-text-muted">+</span>
           <span className="text-2xl sm:text-4xl font-black bg-gradient-to-r from-violet-500 to-pink-500 bg-clip-text text-transparent">Agentic</span>
           <span className="text-2xl sm:text-4xl font-black text-text-muted">=</span>
-          <span className="text-2xl sm:text-4xl font-black gradient-text">AI3</span>
+          <span className="text-2xl sm:text-4xl font-black gradient-text">AI³</span>
         </motion.div>
 
         {/* Deep dive cards */}

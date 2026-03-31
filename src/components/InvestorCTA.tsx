@@ -6,7 +6,7 @@ const reasons = [
   {
     icon: Rocket,
     title: 'Early mover advantage',
-    text: 'The AI orchestration layer is a $200B+ market forming right now. AI3 is building it.',
+    text: 'The AI orchestration layer is a $200B+ market forming right now. AI³ is building it.',
   },
   {
     icon: TrendingUp,
@@ -38,7 +38,7 @@ export default function InvestorCTA() {
             <span className="gradient-text">intelligence layer.</span>
           </h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-            AI3 is raising under Regulation Crowdfunding. For the first time, anyone
+            AI³ is raising under Regulation Crowdfunding. For the first time, anyone
             can invest in the company building the operating system for the AI era.
           </p>
         </motion.div>

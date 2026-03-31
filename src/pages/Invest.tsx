@@ -24,7 +24,7 @@ const tiers = [
   {
     amount: '$25,000+',
     title: 'Founder Circle',
-    perks: ['Everything in Architect', 'Direct founder access', 'Custom AI3 implementation'],
+    perks: ['Everything in Architect', 'Direct founder access', 'Custom AI³ implementation'],
   },
 ]
 
@@ -37,7 +37,7 @@ const whyNow = [
   {
     icon: Users,
     title: 'Traction',
-    text: '50+ organizations already powered by AI3. 10 years of real-world deployment. This isn\'t a pitch deck — it\'s a proven system.',
+    text: '50+ organizations already powered by AI³. 10 years of real-world deployment. This isn\'t a pitch deck — it\'s a proven system.',
   },
   {
     icon: Zap,
@@ -63,7 +63,7 @@ export default function Invest() {
         <div className="relative max-w-4xl mx-auto text-center">
           <Link to="/" className="inline-flex items-center gap-1 text-sm text-text-muted hover:text-white transition-colors mb-8 no-underline">
             <ArrowLeft size={16} />
-            Back to AI3
+            Back to AI³
           </Link>
 
           <motion.h1
@@ -85,7 +85,7 @@ export default function Invest() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-xl text-text-secondary max-w-2xl mx-auto mb-10"
           >
-            AI3 is raising under Regulation Crowdfunding. For the first time, anyone — not just VCs — can
+            AI³ is raising under Regulation Crowdfunding. For the first time, anyone — not just VCs — can
             own a stake in the intelligence layer powering the next generation of business.
           </motion.p>
 
@@ -147,7 +147,7 @@ export default function Invest() {
         </div>
       </section>
 
-      {/* The AI3 Flywheel */}
+      {/* The AI³ Flywheel */}
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -155,12 +155,12 @@ export default function Invest() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl sm:text-5xl font-black tracking-[-0.03em] mb-8">The AI3 Flywheel</h2>
+            <h2 className="text-4xl sm:text-5xl font-black tracking-[-0.03em] mb-8">The AI³ Flywheel</h2>
           </motion.div>
 
           <div className="grid sm:grid-cols-3 gap-4">
             {[
-              { step: '01', title: 'Deploy AI3 for Real Businesses', desc: 'Churches, coaches, creators, and operators — proving the system works in the real world' },
+              { step: '01', title: 'Deploy AI³ for Real Businesses', desc: 'Churches, coaches, creators, and operators — proving the system works in the real world' },
               { step: '02', title: 'Now + Move Products', desc: 'Scalable SaaS platforms anyone can use — built from thousands of hours of real deployment' },
               { step: '03', title: 'Intelligence Layer Compounds', desc: 'Every new user trains the system — more deployments = smarter platform = stronger moat' },
             ].map((item, i) => (
@@ -245,7 +245,7 @@ export default function Invest() {
               Get notified when it goes live.
             </p>
             <a
-              href="mailto:invest@kaifect.com?subject=AI3 Investment Interest"
+              href="mailto:invest@kaifect.com?subject=AI³ Investment Interest"
               className="inline-flex items-center gap-2 px-10 py-4 text-lg font-semibold text-white bg-gradient-to-r from-gradient-start to-gradient-end hover:opacity-90 rounded-full transition-all no-underline glow"
             >
               Express Interest
@@ -257,7 +257,7 @@ export default function Invest() {
               of an offer to buy any securities. Any offering of securities will be made only pursuant to applicable
               securities laws and will be accompanied by a formal offering statement or prospectus. All investments
               involve risk, including the possible loss of principal. Past performance is not indicative of future
-              results. AI3 Inc. makes no representations or warranties regarding the accuracy or completeness of
+              results. AI³ Inc. makes no representations or warranties regarding the accuracy or completeness of
               the information provided herein.
             </p>
           </motion.div>

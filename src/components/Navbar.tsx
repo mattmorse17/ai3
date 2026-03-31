@@ -32,7 +32,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 no-underline">
-          <span className="text-xl font-black tracking-tight gradient-text">AI3</span>
+          <span className="text-xl font-black tracking-tight gradient-text">AI³</span>
         </Link>
 
         {/* Desktop nav */}
@@ -46,6 +46,15 @@ export default function Navbar() {
           <button onClick={() => scrollTo('products')} className="text-sm text-text-secondary hover:text-white transition-colors bg-transparent border-none cursor-pointer">
             Products
           </button>
+          <Link to="/about" className="text-sm text-text-secondary hover:text-white transition-colors no-underline">
+            Team
+          </Link>
+          <Link to="/blog" className="text-sm text-text-secondary hover:text-white transition-colors no-underline">
+            Blog
+          </Link>
+          <Link to="/demo" className="text-sm text-text-secondary hover:text-white transition-colors no-underline">
+            Demo
+          </Link>
           <Link to="/invest" className="text-sm text-text-secondary hover:text-white transition-colors no-underline">
             Invest
           </Link>
@@ -80,8 +89,17 @@ export default function Navbar() {
                 Products
               </button>
               <button onClick={() => scrollTo('thesis')} className="text-left text-text-secondary hover:text-white transition-colors bg-transparent border-none cursor-pointer text-base">
-                Why AI3
+                Why AI³
               </button>
+              <Link to="/about" onClick={() => setMobileOpen(false)} className="text-text-secondary hover:text-white transition-colors no-underline text-base">
+                Team
+              </Link>
+              <Link to="/blog" onClick={() => setMobileOpen(false)} className="text-text-secondary hover:text-white transition-colors no-underline text-base">
+                Blog
+              </Link>
+              <Link to="/demo" onClick={() => setMobileOpen(false)} className="text-text-secondary hover:text-white transition-colors no-underline text-base">
+                Demo
+              </Link>
               <Link to="/invest" onClick={() => setMobileOpen(false)} className="text-text-secondary hover:text-white transition-colors no-underline text-base">
                 Invest
               </Link>

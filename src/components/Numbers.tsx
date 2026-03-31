@@ -1,10 +1,48 @@
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
+import { useEffect, useRef, useState } from 'react'
+
+function AnimatedNumber({ target, suffix = '', decimals = 0 }: { target: number; suffix?: string; decimals?: number }) {
+  const ref = useRef<HTMLDivElement>(null)
+  const inView = useInView(ref, { once: true, margin: '-50px' })
+  const [display, setDisplay] = useState('0')
+
+  useEffect(() => {
+    if (!inView) return
+    const duration = 2000
+    const start = performance.now()
+
+    function tick(now: number) {
+      const elapsed = now - start
+      const progress = Math.min(elapsed / duration, 1)
+      const eased = 1 - Math.pow(1 - progress, 3) // ease out cubic
+      const value = eased * target
+
+      if (target >= 1000) {
+        setDisplay(Math.round(value).toLocaleString())
+      } else if (decimals > 0) {
+        setDisplay(value.toFixed(decimals))
+      } else {
+        setDisplay(Math.round(value).toString())
+      }
+
+      if (progress < 1) requestAnimationFrame(tick)
+    }
+
+    requestAnimationFrame(tick)
+  }, [inView, target, decimals])
+
+  return (
+    <div ref={ref} className="text-4xl sm:text-5xl font-black gradient-text">
+      {display}{suffix}
+    </div>
+  )
+}
 
 const stats = [
-  { value: '10+', label: 'Years building AI-powered businesses' },
-  { value: '50+', label: 'Organizations already powered by AI3' },
-  { value: '3', label: 'Intelligences fused into one system' },
-  { value: '$100M', label: 'Target company valuation' },
+  { target: 2847, suffix: '', decimals: 0, label: 'Messages personalized on the platform' },
+  { target: 156, suffix: '', decimals: 0, label: 'AI agents deployed and operating' },
+  { target: 50, suffix: '+', decimals: 0, label: 'Organizations powered by AI³' },
+  { target: 99.2, suffix: '%', decimals: 1, label: 'Average personalization accuracy' },
 ]
 
 export default function Numbers() {
@@ -21,10 +59,8 @@ export default function Numbers() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="text-center"
             >
-              <div className="text-4xl sm:text-5xl font-black gradient-text mb-2">
-                {stat.value}
-              </div>
-              <p className="text-sm text-text-muted leading-snug">{stat.label}</p>
+              <AnimatedNumber target={stat.target} suffix={stat.suffix} decimals={stat.decimals} />
+              <p className="text-sm text-text-muted leading-snug mt-2">{stat.label}</p>
             </motion.div>
           ))}
         </div>

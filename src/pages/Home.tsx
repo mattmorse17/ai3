@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Thesis from '../components/Thesis'
+import HowItWorks from '../components/HowItWorks'
 import Numbers from '../components/Numbers'
 import Avatars from '../components/Avatars'
 import Products from '../components/Products'
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <Numbers />
       <Thesis />
+      <HowItWorks />
       <Avatars />
       <Products />
       <InvestorCTA />

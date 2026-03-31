@@ -40,7 +40,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          AI3 fuses actual intelligence, artificial intelligence, and agentic intelligence
+          AI³ fuses actual intelligence, artificial intelligence, and agentic intelligence
           into one orchestration layer that makes AI deliver real results for your business.
         </motion.p>
 

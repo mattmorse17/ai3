@@ -48,7 +48,7 @@ const avatars = [
     title: 'Chaotic Creators',
     slug: 'creator',
     hook: '100 ideas a day? Now they all get executed.',
-    description: 'You bring the raw creative energy. AI3 brings the structure and execution. Every idea gets built, tested, and shipped — not just talked about.',
+    description: 'You bring the raw creative energy. AI³ brings the structure and execution. Every idea gets built, tested, and shipped — not just talked about.',
     gradient: 'from-red-500 to-orange-500',
   },
 ]
@@ -71,7 +71,7 @@ export default function Avatars() {
             <span className="text-text-muted">refuse to stay small.</span>
           </h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-            AI3 powers a specific kind of person — the ones with more vision than hours in the day.
+            AI³ powers a specific kind of person — the ones with more vision than hours in the day.
           </p>
         </motion.div>
 
