@@ -83,36 +83,37 @@ const avatarData: Record<string, AvatarData> = {
     result: 'The programs that win in the next decade won\'t just have the best coaches. They\'ll have the best intelligence systems. AI³ gives your program a competitive advantage that compounds every single day.',
   },
   performance: {
-    title: 'Mental Performance Coaches',
-    headline: 'Scale your methodology.\nNot your hours.',
-    subheadline: 'AI³ for Mental Performance',
-    heroDescription: 'You\'ve spent decades developing a methodology that transforms athletes and executives. But you can only be in one room at a time. AI³ lets your framework reach thousands — each one getting a personalized experience as powerful as 1-on-1 coaching.',
+    title: 'Coaches & Consultants',
+    headline: 'Done with Zoom fatigue?\nMaximize every minute.',
+    subheadline: 'AI³ for Coaches & Consultants',
+    heroDescription: 'You\'re spending hours on Zoom and your clients are exhausted too. The problem isn\'t your methodology — it\'s that every session requires you to be live, present, and on. AI³ maximizes the impact of every 1:1 so your clients get more from less, and you get your life back.',
     actual: {
-      title: 'Your Framework',
+      title: 'Your Methodology',
       points: [
-        'Your mental performance system is the foundation — the irreplaceable core',
-        'AI³ encodes your methodology so deeply that clients feel YOUR coaching, not generic advice',
-        'Every visualization, every routine, every framework — delivered your way',
+        'Your coaching framework, your expertise, your ability to transform people — this is irreplaceable',
+        'AI³ encodes your methodology so deeply that clients feel YOUR coaching between sessions',
+        'Every framework, every exercise, every insight — delivered your way, on your terms',
       ],
     },
     artificial: {
-      title: 'Personalized Training',
+      title: 'Personalized Between Sessions',
       points: [
-        'Each athlete\'s mental training adapts to their specific sport, position, and pressure points',
-        'Real-time performance correlation — connecting mental training to on-field results',
-        'Content that adapts: the same core principle, tailored for a pitcher vs. a CEO vs. a surgeon',
+        'Each client\'s experience adapts to their specific situation, goals, and progress',
+        'Pre-session briefs generated from their activity, homework, and real-world results',
+        'Content that adapts: same core principle, tailored for an athlete vs. a CEO vs. a founder',
       ],
     },
     agentic: {
-      title: 'Coaching at Scale',
+      title: 'Your Practice on Autopilot',
       points: [
-        'Daily check-ins with every client — not just the top-tier ones',
+        'Daily check-ins with every client — not just your top-tier ones',
         'Session prep and post-session follow-up generated automatically',
         'A content engine that turns your ideas into books, courses, and programs',
         'Lead gen and client acquisition that runs while you sleep',
+        'Clients get 10x the value from every Zoom because AI³ handles everything in between',
       ],
     },
-    result: 'The world\'s best mental performance coaches are limited by time. AI³ removes that constraint. Your methodology reaches 100x more people — each one getting an experience that feels like you\'re right there with them.',
+    result: 'The best coaches and consultants are limited by time. AI³ removes that constraint. Your methodology reaches 100x more people — and every Zoom session becomes 10x more valuable because the intelligence layer handles everything in between.',
   },
   influencer: {
     title: 'Influencers & Creators',
@@ -275,7 +276,7 @@ export default function AvatarPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             onClick={scrollToWaitlist}
-            className="group px-8 py-3.5 text-base font-semibold text-white bg-accent hover:bg-accent-hover rounded-full transition-all cursor-pointer border-none flex items-center gap-2 mx-auto glow"
+            className="group px-8 py-3.5 text-base font-semibold text-black bg-accent hover:bg-accent-hover rounded-full transition-all cursor-pointer border-none flex items-center gap-2 mx-auto glow"
           >
             Get Started
             <ArrowRight size={18} className="group-hover:translate-x-0.5 transition-transform" />
@@ -354,11 +355,11 @@ export default function AvatarPage() {
               Ready to see it in action?
             </h2>
             <p className="text-text-secondary text-lg mb-10">
-              Join the waitlist for early access to Now and Move — the products that power AI³.
+              Request an invite for early access to Now and Move — the products that power AI³.
             </p>
             <a
               href="mailto:hello@kaifect.com?subject=AI³ Interest — {data.title}"
-              className="inline-flex items-center gap-2 px-10 py-4 text-lg font-semibold text-white bg-gradient-to-r from-gradient-start to-gradient-end hover:opacity-90 rounded-full transition-all no-underline glow"
+              className="inline-flex items-center gap-2 px-10 py-4 text-lg font-semibold text-black font-bold bg-gradient-to-r from-gradient-start to-gradient-end hover:opacity-90 rounded-full transition-all no-underline glow"
             >
               Get Early Access
               <ArrowRight size={20} />

@@ -268,7 +268,7 @@ export default function About() {
                 to="/#waitlist"
                 className="inline-flex items-center justify-center gap-2 px-10 py-4 text-lg font-semibold text-white border border-border hover:border-border-bright rounded-full transition-all no-underline"
               >
-                Join the Waitlist
+                Request an Invite
               </Link>
             </div>
           </motion.div>

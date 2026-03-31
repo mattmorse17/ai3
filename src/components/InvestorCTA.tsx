@@ -69,7 +69,7 @@ export default function InvestorCTA() {
         >
           <Link
             to="/invest"
-            className="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-white bg-gradient-to-r from-gradient-start to-gradient-end hover:opacity-90 rounded-full transition-all no-underline glow"
+            className="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-black font-bold bg-gradient-to-r from-gradient-start to-gradient-end hover:opacity-90 rounded-full transition-all no-underline glow"
           >
             Learn More & Invest
             <TrendingUp size={18} />

@@ -729,7 +729,7 @@ export default function Demo() {
                           <div className="flex flex-wrap gap-3 mt-2">
                             <Link
                               to="/#waitlist"
-                              className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-accent hover:bg-accent-hover rounded-full transition-all no-underline"
+                              className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-black bg-accent hover:bg-accent-hover rounded-full transition-all no-underline"
                             >
                               Get Early Access
                               <ArrowRight size={16} />

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Sparkles } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export default function Hero() {
   const scrollTo = (id: string) => {
@@ -7,18 +8,18 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-grid">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-grid pt-24">
       {/* Radial glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-to-r from-gradient-start/8 to-gradient-end/8 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-to-r from-accent/5 to-gradient-end/8 blur-[120px] pointer-events-none" />
 
-      <div className="relative max-w-5xl mx-auto px-6 text-center pt-24">
+      <div className="relative max-w-5xl mx-auto px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border-bright bg-bg-card/50 text-text-muted text-sm mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5 text-accent text-sm mb-8 font-medium">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
             Now raising — Reg CF open to all investors
           </div>
         </motion.div>
@@ -38,10 +39,20 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto mb-6 leading-relaxed"
         >
-          AI³ fuses actual intelligence, artificial intelligence, and agentic intelligence
-          into one orchestration layer that makes AI deliver real results for your business.
+          Reach more people. Create more impact. Convert more customers.
+          Grow without increasing headcount. AI³ integrates right into your
+          existing workflow and makes everything you're already doing work better.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.25 }}
+          className="text-sm text-text-muted mb-10"
+        >
+          Powered by the fusion of Actual + Artificial + Agentic intelligence
         </motion.p>
 
         <motion.div
@@ -52,17 +63,18 @@ export default function Hero() {
         >
           <button
             onClick={() => scrollTo('waitlist')}
-            className="group px-8 py-3.5 text-base font-semibold text-white bg-accent hover:bg-accent-hover rounded-full transition-all cursor-pointer border-none flex items-center gap-2 glow"
+            className="group px-8 py-3.5 text-base font-bold text-black bg-accent hover:bg-accent-hover rounded-full transition-all cursor-pointer border-none flex items-center gap-2 glow"
           >
-            Get Early Access
+            Request Early Access
             <ArrowRight size={18} className="group-hover:translate-x-0.5 transition-transform" />
           </button>
-          <button
-            onClick={() => scrollTo('products')}
-            className="px-8 py-3.5 text-base font-semibold text-text-secondary hover:text-white bg-transparent border border-border-bright hover:border-text-muted rounded-full transition-all cursor-pointer"
+          <Link
+            to="/assessment"
+            className="group px-8 py-3.5 text-base font-semibold text-accent hover:text-accent-hover bg-transparent border border-accent/30 hover:border-accent/50 rounded-full transition-all no-underline flex items-center gap-2"
           >
-            See What We Build
-          </button>
+            <Sparkles size={16} />
+            Find Your Intelligence Gap
+          </Link>
         </motion.div>
 
         {/* Scroll indicator */}

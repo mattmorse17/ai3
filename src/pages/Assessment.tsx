@@ -513,7 +513,7 @@ export default function Assessment() {
                           <button
                             type="submit"
                             disabled={emailLoading}
-                            className="px-6 py-3.5 text-sm font-semibold text-white bg-accent hover:bg-accent-hover disabled:opacity-50 rounded-full transition-all cursor-pointer border-none flex items-center justify-center gap-2 shrink-0"
+                            className="px-6 py-3.5 text-sm font-semibold text-black bg-accent hover:bg-accent-hover disabled:opacity-50 rounded-full transition-all cursor-pointer border-none flex items-center justify-center gap-2 shrink-0"
                           >
                             {emailLoading ? (
                               <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />

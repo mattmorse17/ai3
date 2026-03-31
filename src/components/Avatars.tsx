@@ -21,10 +21,10 @@ const avatars = [
   },
   {
     icon: Brain,
-    title: 'Mental Performance',
+    title: 'Coaches & Consultants',
     slug: 'performance',
-    hook: 'Scale your methodology without diluting it.',
-    description: 'Your framework becomes personalized for every athlete and client. Session prep, check-ins, and content creation — all on autopilot.',
+    hook: 'Done with Zoom fatigue. Maximize every minute.',
+    description: 'You\'re tired of Zooms. Your clients are too. AI³ maximizes the impact of every 1:1 session — with personalized prep, follow-up, and content that works between calls.',
     gradient: 'from-blue-500 to-cyan-500',
   },
   {

@@ -14,7 +14,7 @@ const products = [
       { icon: Users, text: 'Built for organizations with audiences of any size' },
     ],
     gradient: 'from-blue-600 to-cyan-500',
-    price: '$997 — $4,997/mo',
+    price: '',
     mockup: 'now' as const,
     demoLink: '/demo',
     demoText: 'Try the Live Demo',
@@ -29,7 +29,7 @@ const products = [
       { icon: BarChart3, text: 'Real-time dashboards and performance intelligence' },
     ],
     gradient: 'from-purple-600 to-pink-500',
-    price: '$497 — $2,997/mo',
+    price: '',
     mockup: 'move' as const,
     demoLink: null,
     demoText: null,
@@ -99,11 +99,10 @@ export default function Products() {
                   </div>
 
                   <div className="flex items-center gap-4 shrink-0">
-                    <span className="text-sm text-text-muted">{product.price}</span>
                     {product.demoLink && (
                       <Link
                         to={product.demoLink}
-                        className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-accent hover:bg-accent-hover rounded-full transition-all no-underline"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-black bg-accent hover:bg-accent-hover rounded-full transition-all no-underline"
                       >
                         {product.demoText}
                         <ArrowRight size={14} />

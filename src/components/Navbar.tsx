@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-8 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? 'bg-black/80 backdrop-blur-xl border-b border-border' : 'bg-transparent'
       }`}
     >
@@ -55,12 +55,15 @@ export default function Navbar() {
           <Link to="/demo" className="text-sm text-text-secondary hover:text-white transition-colors no-underline">
             Demo
           </Link>
+          <Link to="/assessment" className="text-sm text-accent hover:text-accent-hover transition-colors no-underline font-medium">
+            Take the Assessment
+          </Link>
           <Link to="/invest" className="text-sm text-text-secondary hover:text-white transition-colors no-underline">
             Invest
           </Link>
           <button
             onClick={() => scrollTo('waitlist')}
-            className="px-5 py-2 text-sm font-semibold text-white bg-accent hover:bg-accent-hover rounded-full transition-all cursor-pointer border-none"
+            className="px-5 py-2 text-sm font-semibold text-black bg-accent hover:bg-accent-hover rounded-full transition-all cursor-pointer border-none"
           >
             Get Early Access
           </button>
@@ -105,7 +108,7 @@ export default function Navbar() {
               </Link>
               <button
                 onClick={() => scrollTo('waitlist')}
-                className="mt-2 px-5 py-3 text-sm font-semibold text-white bg-accent hover:bg-accent-hover rounded-full transition-all cursor-pointer border-none"
+                className="mt-2 px-5 py-3 text-sm font-semibold text-black bg-accent hover:bg-accent-hover rounded-full transition-all cursor-pointer border-none"
               >
                 Get Early Access
               </button>

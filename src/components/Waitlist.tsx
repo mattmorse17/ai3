@@ -36,14 +36,14 @@ export default function Waitlist() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent mb-4">Early Access</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent mb-4">Request an Invite</p>
           <h2 className="text-4xl sm:text-5xl font-black tracking-[-0.03em] leading-tight mb-4">
             The future of business
             <br />
             runs on intelligence.
           </h2>
           <p className="text-lg text-text-secondary mb-10">
-            Join the waitlist to be first in line when Now and Move launch publicly.
+            Request an invite to be first in line when Now and Move launch publicly.
           </p>
         </motion.div>
 
@@ -71,13 +71,13 @@ export default function Waitlist() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full sm:w-auto px-6 py-3.5 text-base font-semibold text-white bg-accent hover:bg-accent-hover disabled:opacity-50 rounded-full transition-all cursor-pointer border-none flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-6 py-3.5 text-base font-semibold text-black bg-accent hover:bg-accent-hover disabled:opacity-50 rounded-full transition-all cursor-pointer border-none flex items-center justify-center gap-2"
               >
                 {loading ? (
                   <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                 ) : (
                   <>
-                    Join Waitlist
+                    Request Invite
                     <ArrowRight size={18} />
                   </>
                 )}
