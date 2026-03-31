@@ -26,7 +26,7 @@ export default function Footer() {
             <Link to="/invest" className="text-sm text-text-muted hover:text-white transition-colors no-underline">
               Invest
             </Link>
-            <a href="mailto:hello@kaifect.com" className="text-sm text-text-muted hover:text-white transition-colors no-underline">
+            <a href="mailto:hello@makeyourmove.ai" className="text-sm text-text-muted hover:text-white transition-colors no-underline">
               Contact
             </a>
           </div>

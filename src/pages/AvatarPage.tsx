@@ -358,7 +358,7 @@ export default function AvatarPage() {
               Request an invite for early access to Now and Move — the products that power AI³.
             </p>
             <a
-              href="mailto:hello@kaifect.com?subject=AI³ Interest — {data.title}"
+              href="mailto:hello@makeyourmove.ai?subject=AI³ Interest — {data.title}"
               className="inline-flex items-center gap-2 px-10 py-4 text-lg font-semibold text-black font-bold bg-gradient-to-r from-gradient-start to-gradient-end hover:opacity-90 rounded-full transition-all no-underline glow"
             >
               Get Early Access
