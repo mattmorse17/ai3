@@ -37,12 +37,12 @@ const whyNow = [
   {
     icon: Users,
     title: 'Traction',
-    text: '50+ clients, 10 years of agency revenue, 27 deployed agents. This isn\'t a pitch deck — it\'s a business.',
+    text: '50+ organizations already powered by AI3. 10 years of real-world deployment. This isn\'t a pitch deck — it\'s a proven system.',
   },
   {
     icon: Zap,
     title: 'Model',
-    text: 'Platform (Now + Move) + Agency (Kaifect) = recurring revenue plus high-margin services.',
+    text: 'Two products (Now + Move) = recurring SaaS revenue from churches, coaches, creators, and business owners.',
   },
   {
     icon: Rocket,
@@ -160,9 +160,9 @@ export default function Invest() {
 
           <div className="grid sm:grid-cols-3 gap-4">
             {[
-              { step: '01', title: 'Kaifect Agency', desc: 'High-touch revenue funds R&D and validates market need' },
-              { step: '02', title: 'Now + Move Products', desc: 'Productize learnings into scalable SaaS platforms' },
-              { step: '03', title: 'Intelligence Layer', desc: 'Every deployment trains the system — compounding advantage' },
+              { step: '01', title: 'Deploy AI3 for Real Businesses', desc: 'Churches, coaches, creators, and operators — proving the system works in the real world' },
+              { step: '02', title: 'Now + Move Products', desc: 'Scalable SaaS platforms anyone can use — built from thousands of hours of real deployment' },
+              { step: '03', title: 'Intelligence Layer Compounds', desc: 'Every new user trains the system — more deployments = smarter platform = stronger moat' },
             ].map((item, i) => (
               <motion.div
                 key={item.step}

@@ -1,8 +1,9 @@
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Thesis from '../components/Thesis'
-import Products from '../components/Products'
 import Numbers from '../components/Numbers'
+import Avatars from '../components/Avatars'
+import Products from '../components/Products'
 import InvestorCTA from '../components/InvestorCTA'
 import Waitlist from '../components/Waitlist'
 import Footer from '../components/Footer'
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <Numbers />
       <Thesis />
+      <Avatars />
       <Products />
       <InvestorCTA />
       <Waitlist />

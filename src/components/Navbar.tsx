@@ -37,11 +37,14 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
+          <button onClick={() => scrollTo('thesis')} className="text-sm text-text-secondary hover:text-white transition-colors bg-transparent border-none cursor-pointer">
+            The Thesis
+          </button>
+          <button onClick={() => scrollTo('who')} className="text-sm text-text-secondary hover:text-white transition-colors bg-transparent border-none cursor-pointer">
+            Who It's For
+          </button>
           <button onClick={() => scrollTo('products')} className="text-sm text-text-secondary hover:text-white transition-colors bg-transparent border-none cursor-pointer">
             Products
-          </button>
-          <button onClick={() => scrollTo('thesis')} className="text-sm text-text-secondary hover:text-white transition-colors bg-transparent border-none cursor-pointer">
-            Why AI3
           </button>
           <Link to="/invest" className="text-sm text-text-secondary hover:text-white transition-colors no-underline">
             Invest

@@ -2,8 +2,8 @@ import { motion } from 'framer-motion'
 
 const stats = [
   { value: '10+', label: 'Years building AI-powered businesses' },
-  { value: '50+', label: 'Clients served through Kaifect agency' },
-  { value: '27', label: 'Named AI agents deployed and operating' },
+  { value: '50+', label: 'Organizations already powered by AI3' },
+  { value: '3', label: 'Intelligences fused into one system' },
   { value: '$100M', label: 'Target company valuation' },
 ]
 
