@@ -4,6 +4,7 @@ import { ArrowRight, ArrowLeft, Check, Brain, Cpu, Bot, Sparkles, ChevronRight, 
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { submitLead } from '../lib/notify'
 
 /* ─── Types ─────────────────────────────────────────────────── */
 
@@ -291,25 +292,15 @@ export default function Assessment() {
     if (!email) return
     setEmailLoading(true)
 
-    try {
-      const leads = JSON.parse(localStorage.getItem('ai3_leads') || '[]')
-      leads.push({
-        email,
-        timestamp: new Date().toISOString(),
-        source: 'assessment',
-        avatar: profile.avatarSlug,
-        avatarOther: otherText || undefined,
-        product: profile.product,
-        strongest: profile.strongest,
-        weakest: profile.weakest,
-        scores: profile.scores,
-      })
-      localStorage.setItem('ai3_leads', JSON.stringify(leads))
-    } catch {
-      // silent
-    }
-
-    await new Promise(r => setTimeout(r, 600))
+    await submitLead({
+      source: 'assessment',
+      email,
+      name: otherText || profile.avatarSlug,
+      interest: profile.product === 'Both Now + Move' ? 'both' : profile.product === 'Now' ? 'now' : 'move',
+      avatar: profile.avatarSlug,
+      strongest: profile.strongest,
+      weakest: profile.weakest,
+    })
     setEmailSubmitted(true)
     setEmailLoading(false)
   }
