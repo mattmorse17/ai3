@@ -6,12 +6,14 @@ const pillars = [
     icon: Brain,
     label: 'Actual Intelligence',
     tagline: 'The Human Edge',
-    description: 'Your expertise. Your intuition. Your relationships. The 10,000 hours that make a coach a great coach, a pastor a great pastor, a creator a great creator, a teacher a great teacher. No model can replicate what you know. AI³ doesn\'t try to. It amplifies your actual Intelligence.',
+    description: 'Your expertise. Your intuition. Your relationships. The 10,000 hours that make a coach a great coach, a pastor a great pastor, a creator a great creator, a teacher a great teacher. No model can replicate what you know. AI³ doesn\'t try to. It amplifies your Actual Intelligence.',
     examples: [
       'A coach\'s philosophy becomes the DNA of every agent in their system',
       'A teacher\'s curriculum adapts to every student\'s learning style',
       'A creator\'s voice stays authentic across 50x more content',
       'Every email you send to your list becomes personalized for each subscriber',
+      'A business owner\'s sales process becomes the playbook for every agent',
+      'An event planner\'s vision becomes the blueprint for autonomous coordination',
     ],
     color: 'from-blue-500 to-cyan-500',
     bgColor: 'bg-blue-500/5',
@@ -26,6 +28,8 @@ const pillars = [
       'AI³ doesn\'t build models. We build the orchestration layer',
       'Optimized to automatically choose between Claude, GPT, Gemini, Grok, and more',
       'The right model for the right task at the right time. Automatically.',
+      'Real-time translation so language is never a barrier',
+      'Instant analysis of any document, video, or conversation',
     ],
     color: 'from-purple-500 to-violet-500',
     bgColor: 'bg-purple-500/5',
@@ -40,6 +44,8 @@ const pillars = [
       'A fleet of agents that knows you as well as your best team member',
       'Always on, always working, always improving. However you customize them.',
       'Every student gets personalized learning. Every audience member gets a unique experience.',
+      'A coach\'s recruiting pipeline runs 24/7 without missing a prospect',
+      'An event coordinator\'s logistics handled autonomously from start to finish',
     ],
     color: 'from-violet-500 to-pink-500',
     bgColor: 'bg-violet-500/5',
@@ -79,7 +85,7 @@ export default function Thesis() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex items-center justify-center gap-3 sm:gap-5 py-12 mb-16"
+          className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 py-12 mb-16"
         >
           <span className="text-2xl sm:text-4xl font-black bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">Actual</span>
           <span className="text-2xl sm:text-4xl font-black text-text-muted">+</span>

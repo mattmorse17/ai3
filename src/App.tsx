@@ -13,6 +13,7 @@ import Kaifect from './pages/Kaifect'
 import Village from './pages/Village'
 import Vyro from './pages/Vyro'
 import MoveDemo from './pages/MoveDemo'
+import Contact from './pages/Contact'
 
 export default function App() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
         <Route path="/village" element={<Village />} />
         <Route path="/vyro" element={<Vyro />} />
         <Route path="/move" element={<MoveDemo />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   )

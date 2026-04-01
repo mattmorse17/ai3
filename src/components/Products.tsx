@@ -16,7 +16,7 @@ const products = [
     gradient: 'from-blue-600 to-cyan-500',
     price: '',
     mockup: 'now' as const,
-    demoLink: '/demo',
+    demoLink: '/now',
     demoText: 'Try the Live Demo',
   },
   {

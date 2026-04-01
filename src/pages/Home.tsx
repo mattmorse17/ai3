@@ -22,9 +22,9 @@ export default function Home() {
       <Numbers />
       <Thesis />
       <Integrations />
-      <HowItWorks />
       <Avatars />
       <Products />
+      <HowItWorks />
       <Ventures />
       <InvestorCTA />
       <Waitlist />

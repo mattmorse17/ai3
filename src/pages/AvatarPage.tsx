@@ -213,6 +213,38 @@ const avatarData: Record<string, AvatarData> = {
     },
     result: 'You were never the problem. The world just couldn\'t keep up with you. AI³ can. Every idea gets executed. Every project gets shipped. Every vision becomes reality.',
   },
+  education: {
+    title: 'Education & Classrooms',
+    headline: 'Every student gets\na personalized\nexperience.',
+    subheadline: 'AI³ for Education',
+    heroDescription: 'Every classroom has students at different levels, with different learning styles, speaking different languages. What if your curriculum automatically adapted to each one — without changing what you teach?',
+    actual: {
+      title: 'Your Teaching Expertise',
+      points: [
+        'Your curriculum, your pedagogy, your ability to connect with students. This is irreplaceable.',
+        'AI³ doesn\'t replace teachers. It amplifies every lesson so it lands for every student.',
+        'Your teaching philosophy becomes the foundation for personalized learning at scale.',
+      ],
+    },
+    artificial: {
+      title: 'Adaptive Learning Intelligence',
+      points: [
+        'Each student\'s experience adapts to their level, pace, and learning style automatically.',
+        'Real-time translation so language is never a barrier to understanding.',
+        'Assessment and progress tracking that reveals what each student actually needs.',
+      ],
+    },
+    agentic: {
+      title: 'A Teaching Assistant That Never Sleeps',
+      points: [
+        'Personalized study materials generated for every student after every class.',
+        'Parent communication and progress updates handled automatically.',
+        'Homework help and tutoring available 24/7, aligned to your curriculum.',
+        'Administrative tasks — grading, scheduling, reporting — running in the background.',
+      ],
+    },
+    result: 'Imagine a classroom where every student feels like the lesson was designed just for them. Where no one falls behind because they learn differently. Where teachers are freed from admin to do what they do best — teach. That\'s AI³ for Education.',
+  },
 }
 
 export default function AvatarPage() {

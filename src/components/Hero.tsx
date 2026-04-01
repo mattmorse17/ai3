@@ -39,18 +39,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto mb-6 leading-relaxed"
+          className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          AI³ fuses actual Intelligence, artificial Intelligence, and agentic Intelligence into one system that helps you reach more people, create more impact, and get more done — whether you run a business, lead a classroom, coach a team, or create content.
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.25 }}
-          className="text-sm text-text-muted mb-10"
-        >
-          Powered by the fusion of Actual + Artificial + Agentic Intelligence
+          AI³ fuses Actual Intelligence, Artificial Intelligence, and Agentic Intelligence into one system that helps you reach more people, create more impact, and get more done — whether you run a business, lead a classroom, coach a team, or create content.
         </motion.p>
 
         <motion.div

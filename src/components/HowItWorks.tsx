@@ -24,6 +24,10 @@ const inputs = [
   { icon: MessageSquare, label: 'Text' },
   { icon: Link, label: 'Link' },
   { icon: FileText, label: 'Content' },
+  { icon: Mic, label: 'Live Broadcast' },
+  { icon: MessageSquare, label: 'Zoom Call' },
+  { icon: FileText, label: 'Course/Curriculum' },
+  { icon: FileText, label: 'Book/Ebook' },
 ]
 
 const layers = [
@@ -60,10 +64,10 @@ const layers = [
 ]
 
 const outputs = [
-  { icon: Users, label: 'Personalized for rookie (en espanol)', color: 'text-blue-400' },
-  { icon: Users, label: 'Personalized for veteran', color: 'text-purple-400' },
-  { icon: Calendar, label: 'Follow-up scheduled', color: 'text-violet-400' },
-  { icon: CheckCircle, label: 'Training plan generated', color: 'text-pink-400' },
+  { icon: Users, label: 'Personalized summary for each recipient', color: 'text-blue-400' },
+  { icon: FileText, label: 'Interactive follow-up resources', color: 'text-purple-400' },
+  { icon: Calendar, label: 'Translated into 12+ languages', color: 'text-violet-400' },
+  { icon: CheckCircle, label: 'Agentic actions triggered automatically', color: 'text-pink-400' },
 ]
 
 /* ------------------------------------------------------------------ */
@@ -215,7 +219,7 @@ export default function HowItWorks() {
               {/* Example label */}
               <div className="mt-4 pt-3 border-t border-border">
                 <p className="text-xs text-text-muted italic leading-relaxed">
-                  "Weekly team update from coach"
+                  Any content, any format
                 </p>
               </div>
             </div>
@@ -368,8 +372,8 @@ export default function HowItWorks() {
           <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-bg-card border border-border">
             <ArrowRight size={14} className="text-accent" />
             <span className="text-sm text-text-secondary">
-              One voice memo in&nbsp;&mdash;&nbsp;four personalized deliverables out.{' '}
-              <span className="text-white font-medium">In minutes, not days.</span>
+              One input. Infinite personalized deliverables.{' '}
+              <span className="text-white font-medium">Live or async.</span>
             </span>
           </div>
         </motion.div>
