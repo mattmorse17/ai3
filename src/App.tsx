@@ -21,7 +21,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/invest" element={<Invest />} />
-        <Route path="/demo" element={<Demo />} />
+        <Route path="/now" element={<Demo />} />
         <Route path="/assessment" element={<Assessment />} />
         <Route path="/for/:slug" element={<AvatarPage />} />
         <Route path="/blog" element={<Blog />} />
@@ -31,7 +31,7 @@ export default function App() {
         <Route path="/kaifect" element={<Kaifect />} />
         <Route path="/village" element={<Village />} />
         <Route path="/vyro" element={<Vyro />} />
-        <Route path="/move-demo" element={<MoveDemo />} />
+        <Route path="/move" element={<MoveDemo />} />
       </Routes>
     </BrowserRouter>
   )

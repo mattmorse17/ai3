@@ -29,7 +29,7 @@ function Dropdown({ label, items, onClose }: { label: string; items: { to: strin
             initial={{ opacity: 0, y: -4 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -4 }}
-            className="absolute top-full left-0 mt-2 w-48 bg-bg-card border border-border rounded-xl py-2 shadow-xl z-50"
+            className="absolute top-full left-0 mt-2 min-w-[12rem] w-max max-w-[22rem] bg-bg-card border border-border rounded-xl py-2 shadow-xl z-50"
           >
             {items.map((item) => (
               <Link
@@ -77,25 +77,28 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <div className="hidden lg:flex items-center gap-6">
-          <button onClick={() => scrollTo('thesis')} className="text-sm text-text-secondary hover:text-white transition-colors bg-transparent border-none cursor-pointer">
-            The Thesis
+          <button onClick={() => scrollTo('intelligence')} className="text-sm text-text-secondary hover:text-white transition-colors bg-transparent border-none cursor-pointer">
+            Intelligence
           </button>
 
           <Dropdown label="Products" onClose={close} items={[
-            { to: '/demo', label: 'Now — Live Demo' },
-            { to: '/move-demo', label: 'Move — Live Demo' },
-            { to: '/for/church', label: 'For Churches' },
-            { to: '/for/sports', label: 'For Sports Coaches' },
-            { to: '/for/performance', label: 'For Coaches & Consultants' },
-            { to: '/for/influencer', label: 'For Influencers' },
-            { to: '/for/business', label: 'For Business Owners' },
-            { to: '/for/creator', label: 'For Creators' },
+            { to: '/now', label: 'Now' },
+            { to: '/move', label: 'Move' },
+          ]} />
+
+          <Dropdown label="Who It's For" onClose={close} items={[
+            { to: '/for/education', label: 'Education' },
+            { to: '/for/creator', label: 'Creators & Influencers' },
+            { to: '/for/business', label: 'Business Owners' },
+            { to: '/for/sports', label: 'Sports Coaches' },
+            { to: '/for/church', label: 'Churches & Ministries' },
+            { to: '/for/performance', label: 'Life & Business Coaches' },
           ]} />
 
           <Dropdown label="Ventures" onClose={close} items={[
-            { to: '/kaifect', label: 'Kaifect — AI Agency' },
-            { to: '/village', label: 'The Village™ — Smart Living' },
-            { to: '/vyro', label: 'Vyro — Acquisitions' },
+            { to: '/kaifect', label: 'Kaifect — AI³ Powered Growth Partner' },
+            { to: '/village', label: 'The Village — AI³ Powered Smart Barndo Living' },
+            { to: '/vyro', label: 'Vyro — AI³ Powered Acquisitions' },
           ]} />
 
           <Dropdown label="Learn" onClose={close} items={[
@@ -137,21 +140,21 @@ export default function Navbar() {
           >
             <div className="px-6 py-6 flex flex-col gap-3 max-h-[70vh] overflow-y-auto">
               <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mt-2">Products</p>
-              <Link to="/demo" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Now — Live Demo</Link>
-              <Link to="/move-demo" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Move — Live Demo</Link>
+              <Link to="/now" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Now</Link>
+              <Link to="/move" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Move</Link>
 
               <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mt-4">Who It's For</p>
-              <Link to="/for/church" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Churches</Link>
-              <Link to="/for/sports" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Sports Coaches</Link>
-              <Link to="/for/performance" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Coaches & Consultants</Link>
-              <Link to="/for/influencer" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Influencers</Link>
+              <Link to="/for/education" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Education</Link>
+              <Link to="/for/creator" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Creators & Influencers</Link>
               <Link to="/for/business" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Business Owners</Link>
-              <Link to="/for/creator" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Creators</Link>
+              <Link to="/for/sports" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Sports Coaches</Link>
+              <Link to="/for/church" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Churches & Ministries</Link>
+              <Link to="/for/performance" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Life & Business Coaches</Link>
 
               <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mt-4">Ventures</p>
-              <Link to="/kaifect" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Kaifect — AI Agency</Link>
-              <Link to="/village" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">The Village™</Link>
-              <Link to="/vyro" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Vyro Ventures</Link>
+              <Link to="/kaifect" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Kaifect — AI³ Powered Growth Partner</Link>
+              <Link to="/village" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">The Village — AI³ Powered Smart Barndo Living</Link>
+              <Link to="/vyro" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Vyro — AI³ Powered Acquisitions</Link>
 
               <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mt-4">Learn</p>
               <Link to="/blog" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Blog</Link>

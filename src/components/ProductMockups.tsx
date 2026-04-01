@@ -11,7 +11,7 @@ function BrowserFrame({ children, className = '' }: { children: React.ReactNode;
         <span className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
         <div className="flex-1 mx-4">
           <div className="mx-auto max-w-[220px] h-5 rounded-md bg-zinc-800 border border-zinc-700/50 flex items-center justify-center">
-            <span className="text-[10px] text-zinc-500 select-none tracking-wide">app.ai3.dev</span>
+            <span className="text-[10px] text-zinc-500 select-none tracking-wide">makeyourmove.ai</span>
           </div>
         </div>
       </div>
@@ -58,31 +58,31 @@ const audienceMembers = [
     tag: 'Spanish',
     tagColor: 'bg-amber-500/15 text-amber-400',
     color: 'bg-gradient-to-br from-rose-500 to-orange-500',
-    preview: 'La gracia no es algo que ganamos, es algo que recibimos...',
+    preview: 'La resiliencia no es algo que nace de la nada, se construye con cada desaf\u00edo...',
   },
   {
     initials: 'JT',
     name: 'James Torres',
-    tag: 'New Believer',
+    tag: 'New Leader',
     tagColor: 'bg-sky-500/15 text-sky-400',
     color: 'bg-gradient-to-br from-blue-500 to-cyan-500',
-    preview: 'Think of grace like this: imagine someone hands you a gift you could never afford...',
+    preview: 'Think of resilience like a muscle — every setback is a rep that makes you stronger...',
   },
   {
     initials: 'SK',
     name: 'Sarah Kim',
-    tag: 'Youth',
+    tag: 'Student',
     tagColor: 'bg-violet-500/15 text-violet-400',
     color: 'bg-gradient-to-br from-violet-500 to-purple-500',
-    preview: 'Grace is basically getting something amazing you didn\'t earn. No strings attached...',
+    preview: 'Resilience is basically bouncing back stronger every time life knocks you down...',
   },
   {
-    initials: 'AA',
-    name: 'Ahmad Ali',
-    tag: 'Arabic',
+    initials: 'DW',
+    name: 'David Washington',
+    tag: 'Executive',
     tagColor: 'bg-emerald-500/15 text-emerald-400',
     color: 'bg-gradient-to-br from-emerald-500 to-teal-500',
-    preview: '\u0627\u0644\u0646\u0639\u0645\u0629 \u0644\u064A\u0633\u062A \u0634\u064A\u0626\u064B\u0627 \u0646\u0643\u0633\u0628\u0647\u060C \u0628\u0644 \u0647\u064A \u0647\u0628\u0629 \u0646\u062A\u0644\u0642\u0627\u0647\u0627...',
+    preview: 'The key insight here is that resilience compounds — each challenge you overcome builds capacity...',
   },
 ]
 
@@ -99,7 +99,7 @@ export function NowMockup() {
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-[10px] text-zinc-500">Sunday Service</span>
+          <span className="text-[10px] text-zinc-500">Keynote Session</span>
           <Clock size={12} className="text-zinc-600" />
           <span className="text-[10px] text-zinc-500 tabular-nums">14:32</span>
         </div>
@@ -115,12 +115,12 @@ export function NowMockup() {
           </div>
           <div className="rounded-lg bg-zinc-900/70 border border-zinc-800/60 p-3">
             <p className="text-[11px] leading-relaxed text-zinc-300">
-              "Grace is not something we earn through our actions or good deeds. It is a gift freely given, requiring only that we open our hearts to receive it. When we understand grace, everything changes..."
+              "Resilience is not something we're born with. It is a skill we build through every challenge we face. When we embrace adversity as fuel, everything changes..."
             </p>
             <div className="mt-3 pt-2 border-t border-zinc-800/50 flex items-center gap-2">
-              <Avatar initials="PJ" color="bg-gradient-to-br from-blue-600 to-blue-400" />
+              <Avatar initials="TM" color="bg-gradient-to-br from-blue-600 to-blue-400" />
               <div>
-                <p className="text-[10px] font-medium text-zinc-300">Pastor Johnson</p>
+                <p className="text-[10px] font-medium text-zinc-300">Taylor Mitchell</p>
                 <p className="text-[9px] text-zinc-600">Speaker</p>
               </div>
             </div>

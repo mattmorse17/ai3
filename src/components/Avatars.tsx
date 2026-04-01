@@ -1,38 +1,22 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Church, Trophy, Brain, Flame, Briefcase, Mic } from 'lucide-react'
+import { ArrowRight, Church, Trophy, Brain, Briefcase, Mic, GraduationCap } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const avatars = [
   {
-    icon: Church,
-    title: 'Churches & Ministries',
-    slug: 'church',
-    hook: 'One message. Every heart. Personally.',
-    description: 'Your sermon adapts to every person in the room — live. Follow-up happens automatically. Volunteer coordination runs itself.',
-    gradient: 'from-amber-500 to-orange-500',
-  },
-  {
-    icon: Trophy,
-    title: 'Sports Coaches',
-    slug: 'sports',
-    hook: 'Recruit smarter. Develop faster. Win more.',
-    description: 'Film breakdown, opponent scouting, recruiting outreach, and player development — running 24/7 with your coaching philosophy embedded.',
-    gradient: 'from-green-500 to-emerald-500',
-  },
-  {
-    icon: Brain,
-    title: 'Coaches & Consultants',
-    slug: 'performance',
-    hook: 'Done with Zoom fatigue. Maximize every minute.',
-    description: 'You\'re tired of Zooms. Your clients are too. AI³ maximizes the impact of every 1:1 session — with personalized prep, follow-up, and content that works between calls.',
-    gradient: 'from-blue-500 to-cyan-500',
+    icon: GraduationCap,
+    title: 'Education & Classrooms',
+    slug: 'education',
+    hook: 'Every student gets a personalized experience.',
+    description: 'Curriculum that adapts to every learner. Teachers amplified, not replaced. AI³ transforms any classroom into a personalized learning environment.',
+    gradient: 'from-emerald-500 to-teal-500',
   },
   {
     icon: Mic,
-    title: 'Influencers & Creators',
-    slug: 'influencer',
-    hook: 'Stay authentic at 50x the output.',
-    description: 'Your voice, your brand — amplified across every platform. Content ideation, scheduling, DM management, and brand deals handled by agents that sound like you.',
+    title: 'Creators & Influencers',
+    slug: 'creator',
+    hook: 'Your voice. Every platform. 50x the output.',
+    description: 'Content ideation, scheduling, DM management, brand deals — all handled by agents that sound like you. Whether you post 3x a week or have 100 ideas a day, AI³ keeps up.',
     gradient: 'from-pink-500 to-rose-500',
   },
   {
@@ -44,12 +28,28 @@ const avatars = [
     gradient: 'from-purple-500 to-violet-500',
   },
   {
-    icon: Flame,
-    title: 'Chaotic Creators',
-    slug: 'creator',
-    hook: '100 ideas a day? Now they all get executed.',
-    description: 'You bring the raw creative energy. AI³ brings the structure and execution. Every idea gets built, tested, and shipped — not just talked about.',
-    gradient: 'from-red-500 to-orange-500',
+    icon: Trophy,
+    title: 'Sports Coaches',
+    slug: 'sports',
+    hook: 'Recruit smarter. Develop faster. Win more.',
+    description: 'Film breakdown, opponent scouting, recruiting outreach, and player development — running 24/7 with your coaching philosophy embedded.',
+    gradient: 'from-green-500 to-emerald-500',
+  },
+  {
+    icon: Church,
+    title: 'Churches & Ministries',
+    slug: 'church',
+    hook: 'One message. Every heart. Personally.',
+    description: 'Your sermon adapts to every person in the room — live. Follow-up happens automatically. Volunteer coordination runs itself.',
+    gradient: 'from-amber-500 to-orange-500',
+  },
+  {
+    icon: Brain,
+    title: 'Life & Business Coaches',
+    slug: 'performance',
+    hook: 'Done with Zoom fatigue. Maximize every minute.',
+    description: 'Personalized prep, real-time session Intelligence, automated follow-up. Your clients get 10x the value from every session because AI³ handles everything in between.',
+    gradient: 'from-blue-500 to-cyan-500',
   },
 ]
 

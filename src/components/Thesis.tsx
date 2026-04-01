@@ -6,11 +6,12 @@ const pillars = [
     icon: Brain,
     label: 'Actual Intelligence',
     tagline: 'The Human Edge',
-    description: 'Your expertise. Your intuition. Your relationships. The 10,000 hours that make a coach a great coach, a pastor a great pastor, a creator a great creator. No model can replicate what you know. AI³ doesn\'t try to — it amplifies it.',
+    description: 'Your expertise. Your intuition. Your relationships. The 10,000 hours that make a coach a great coach, a pastor a great pastor, a creator a great creator, a teacher a great teacher. No model can replicate what you know. AI³ doesn\'t try to. It amplifies your actual Intelligence.',
     examples: [
       'A coach\'s philosophy becomes the DNA of every agent in their system',
-      'A pastor\'s message adapts to every individual — without losing the heart',
+      'A teacher\'s curriculum adapts to every student\'s learning style',
       'A creator\'s voice stays authentic across 50x more content',
+      'Every email you send to your list becomes personalized for each subscriber',
     ],
     color: 'from-blue-500 to-cyan-500',
     bgColor: 'bg-blue-500/5',
@@ -20,11 +21,11 @@ const pillars = [
     icon: Cpu,
     label: 'Artificial Intelligence',
     tagline: 'The Capability Layer',
-    description: 'Language models. Vision systems. Reasoning engines. The world\'s most powerful AI models are commodities — everyone has access to the same ones. The question isn\'t which model you use. It\'s how intelligently you orchestrate them.',
+    description: 'Language models. Vision systems. Reasoning engines. The world\'s most powerful AI models are commodities. Everyone has access to the same ones. Think of them as calculators for words and ideas. You wouldn\'t solve a complex math problem by hand when you have a calculator. AI³ orchestrates the right model for the right task at the right time. Automatically.',
     examples: [
-      'AI³ doesn\'t build models — we build the orchestration layer',
-      'Like Perplexity built the best search without building a single model',
-      'The right model for the right task at the right time — automatically',
+      'AI³ doesn\'t build models. We build the orchestration layer',
+      'Optimized to automatically choose between Claude, GPT, Gemini, Grok, and more',
+      'The right model for the right task at the right time. Automatically.',
     ],
     color: 'from-purple-500 to-violet-500',
     bgColor: 'bg-purple-500/5',
@@ -34,11 +35,11 @@ const pillars = [
     icon: Bot,
     label: 'Agentic Intelligence',
     tagline: 'The Execution Engine',
-    description: 'Not chatbots. Operators. Named agents with specific roles that run real workflows — marketing, sales, fulfillment, support — 24 hours a day, 7 days a week. They don\'t wait for instructions. They execute, learn, and improve.',
+    description: 'Not chatbots. Operators. Named agents with specific roles that work for you 24 hours a day, 7 days a week. They execute, learn, and improve with every interaction. Whether you need agents managing your marketing, personalizing your classroom, coordinating your events, or running your entire operation.',
     examples: [
-      'A fleet of agents that know your business as well as your best employee',
-      'From lead to close to fulfillment — autonomous, but aligned to your values',
-      'Every interaction trains the system — compounding advantage over time',
+      'A fleet of agents that knows you as well as your best team member',
+      'Always on, always working, always improving. However you customize them.',
+      'Every student gets personalized learning. Every audience member gets a unique experience.',
     ],
     color: 'from-violet-500 to-pink-500',
     bgColor: 'bg-violet-500/5',
@@ -48,7 +49,7 @@ const pillars = [
 
 export default function Thesis() {
   return (
-    <section id="thesis" className="relative py-32 px-6">
+    <section id="intelligence" className="relative py-32 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <motion.div
@@ -58,17 +59,17 @@ export default function Thesis() {
           transition={{ duration: 0.7 }}
           className="text-center mb-8"
         >
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent mb-4">The Thesis</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent mb-4">The Intelligence</p>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-[-0.03em] leading-tight mb-6">
             AI models alone don't
             <br />
-            <span className="text-text-muted">solve business problems.</span>
+            <span className="text-text-muted">create real change.</span>
           </h2>
           <p className="text-lg text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Everyone has access to the same AI. So why do most businesses still get nothing from it?
-            Because there's a massive gap between "AI exists" and "AI works for my business."
-            That gap is an orchestration problem. AI³ closes it by fusing three distinct intelligences
-            into one system.
+            Everyone has access to the same AI. So why aren't more people getting results from it?
+            Because there's a massive gap between "AI exists" and "AI is working for me 24/7 to
+            improve my life, my business, my relationships, and my impact." That gap is a communication
+            and orchestration problem. AI³ closes it by fusing three distinct intelligences into one system.
           </p>
         </motion.div>
 

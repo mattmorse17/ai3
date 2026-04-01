@@ -10,13 +10,13 @@ const reasons = [
   },
   {
     icon: TrendingUp,
-    title: 'Real revenue, real clients',
-    text: '10+ years of agency revenue. 50+ clients. Now productizing into scalable SaaS.',
+    title: 'Community round — open to everyone',
+    text: 'Invest as little as $100 via Reg CF. Same opportunity previously reserved for VCs and angels.',
   },
   {
     icon: Shield,
-    title: 'Reg CF — open to everyone',
-    text: 'Invest as little as $500. Same opportunity previously reserved for VCs and angels.',
+    title: 'Private round for accredited investors',
+    text: 'Accredited investors can participate in the private round with preferred terms and priority access.',
   },
 ]
 

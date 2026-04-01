@@ -4,6 +4,8 @@ import { ArrowRight, Check } from 'lucide-react'
 
 export default function Waitlist() {
   const [email, setEmail] = useState('')
+  const [interest, setInterest] = useState('')
+  const [investInterest, setInvestInterest] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
 
@@ -15,7 +17,7 @@ export default function Waitlist() {
     // Store lead locally + will hook up to backend
     try {
       const leads = JSON.parse(localStorage.getItem('ai3_leads') || '[]')
-      leads.push({ email, timestamp: new Date().toISOString() })
+      leads.push({ email, interest, investInterest, timestamp: new Date().toISOString() })
       localStorage.setItem('ai3_leads', JSON.stringify(leads))
     } catch {
       // silent
@@ -38,9 +40,9 @@ export default function Waitlist() {
         >
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent mb-4">Request an Invite</p>
           <h2 className="text-4xl sm:text-5xl font-black tracking-[-0.03em] leading-tight mb-4">
-            The future of business
+            The future runs on
             <br />
-            runs on intelligence.
+            autonomous Intelligence.
           </h2>
           <p className="text-lg text-text-secondary mb-10">
             Request an invite to be first in line when Now and Move launch publicly.
@@ -59,15 +61,34 @@ export default function Waitlist() {
               <span className="font-medium">You're on the list. We'll be in touch.</span>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center gap-3 max-w-md mx-auto">
+            <form onSubmit={handleSubmit} className="flex flex-col items-center gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 required
-                className="w-full sm:flex-1 px-5 py-3.5 rounded-full bg-bg-card border border-border text-white placeholder-text-muted outline-none focus:border-accent transition-colors text-base"
+                className="w-full px-5 py-3.5 rounded-full bg-bg-card border border-border text-white placeholder-text-muted outline-none focus:border-accent transition-colors text-base"
               />
+              <select
+                value={interest}
+                onChange={(e) => setInterest(e.target.value)}
+                className="w-full px-5 py-3.5 rounded-full bg-bg-card border border-border text-white outline-none focus:border-accent transition-colors text-base appearance-none cursor-pointer"
+              >
+                <option value="" disabled>What are you most interested in?</option>
+                <option value="now">Now — Personalized Intelligence</option>
+                <option value="move">Move — AI Command Center</option>
+                <option value="both">Both Now + Move</option>
+              </select>
+              <label className="flex items-center gap-3 cursor-pointer self-start pl-2">
+                <input
+                  type="checkbox"
+                  checked={investInterest}
+                  onChange={(e) => setInvestInterest(e.target.checked)}
+                  className="w-4 h-4 rounded border-border accent-accent cursor-pointer"
+                />
+                <span className="text-sm text-text-secondary">I'm also interested in investing in AI³</span>
+              </label>
               <button
                 type="submit"
                 disabled={loading}

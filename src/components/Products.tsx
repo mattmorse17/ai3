@@ -7,7 +7,7 @@ const products = [
   {
     name: 'Now',
     tagline: 'Personalized intelligence for every individual.',
-    description: 'For any room with a speaker and an audience. Now transforms static content into a personalized experience — live or async — so every person gets exactly what they need.',
+    description: 'For any room with a speaker and an audience — classrooms, churches, business seminars, stages, studios. Now transforms any content into a personalized experience, live or async, so every person gets exactly what they need, when and where they need it.',
     features: [
       { icon: Radio, text: 'Live Mode — real-time audio personalized per individual' },
       { icon: BookOpen, text: 'Async Mode — books, courses, and podcasts that adapt to you' },
@@ -22,7 +22,7 @@ const products = [
   {
     name: 'Move',
     tagline: 'Your AI command center.',
-    description: 'Every business needs agents. Move gives you a named fleet of AI operators that run your marketing, sales, fulfillment, and support — so you can focus on what only you can do.',
+    description: 'Everyone needs agents working for them 24/7. Move walks you through creating your own fleet of AI agents that manage your life, your business, your classroom, your events — so you can focus on what only you can do.',
     features: [
       { icon: Bot, text: 'Named agents with specific roles and expertise' },
       { icon: Zap, text: 'Autonomous execution across your entire operation' },
@@ -31,8 +31,8 @@ const products = [
     gradient: 'from-purple-600 to-pink-500',
     price: '',
     mockup: 'move' as const,
-    demoLink: null,
-    demoText: null,
+    demoLink: '/move',
+    demoText: 'Try the Live Demo',
   },
 ]
 

@@ -6,6 +6,8 @@ const integrations = [
   'Zapier', 'Airtable', 'Asana', 'Monday.com', 'ClickUp', 'Discord',
   'YouTube', 'Instagram', 'TikTok', 'LinkedIn', 'X / Twitter', 'Spotify',
   'Podcast Platforms', 'Wix', 'Squarespace', 'QuickBooks', 'Dropbox', 'Canva',
+  'Kaifecta', 'Kajabi', 'Facebook Ads', 'Google Ads', 'SubMagic', 'Loom',
+  'Vimeo', 'Teachable', 'Thinkific', 'Planning Center', 'ProPresenter',
 ]
 
 export default function Integrations() {

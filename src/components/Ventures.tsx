@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom'
 const ventures = [
   {
     icon: Home,
-    name: 'The Village™',
+    name: 'The Village',
     tagline: 'The future of living.',
-    description: '30 custom modern barndominiums near Nashville. Smart everything. Robot-ready. The first full-stack connected living community in the country.',
+    description: 'Communities of custom, smart barndominiums. Spacious, customizable, robot-ready homes that don\'t exist anywhere else. Built with AI³ methodology from the ground up.',
     link: '/village',
     gradient: 'from-amber-500 to-orange-500',
   },
@@ -15,7 +15,7 @@ const ventures = [
     icon: Building2,
     name: 'Vyro Ventures',
     tagline: 'AI-powered acquisitions.',
-    description: 'We buy established businesses, deploy AI\u00b3 agents across every function, scale 3-10x, and exit at premium multiples.',
+    description: 'We buy established businesses, deploy AI³ agents across every function, scale 3-10x, and exit at premium multiples.',
     link: '/vyro',
     gradient: 'from-cyan-500 to-blue-500',
   },
@@ -31,7 +31,7 @@ export default function Ventures() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent mb-4">AI\u00b3 Ventures</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent mb-4">AI³ Ventures</p>
           <h2 className="text-3xl sm:text-4xl font-black tracking-[-0.03em] leading-tight mb-4">
             The intelligence layer
             <span className="text-text-muted"> powers more than software.</span>

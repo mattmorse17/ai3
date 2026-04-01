@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-6">
             <span className="text-lg font-black gradient-text">AI³</span>
-            <span className="text-text-muted text-sm">The Intelligence Company</span>
+            <span className="text-text-muted text-sm">Intelligence in Action</span>
           </div>
 
           <div className="flex items-center gap-8 flex-wrap justify-center md:justify-end">

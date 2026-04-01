@@ -20,7 +20,7 @@ export default function Hero() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5 text-accent text-sm mb-8 font-medium">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-            Now raising — Reg CF open to all investors
+            Now raising — Community + Private rounds open
           </div>
         </motion.div>
 
@@ -41,9 +41,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-lg sm:text-xl text-text-secondary max-w-2xl mx-auto mb-6 leading-relaxed"
         >
-          Reach more people. Create more impact. Convert more customers.
-          Grow without increasing headcount. AI³ integrates right into your
-          existing workflow and makes everything you're already doing work better.
+          AI³ fuses actual Intelligence, artificial Intelligence, and agentic Intelligence into one system that helps you reach more people, create more impact, and get more done — whether you run a business, lead a classroom, coach a team, or create content.
         </motion.p>
 
         <motion.p
@@ -52,7 +50,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.25 }}
           className="text-sm text-text-muted mb-10"
         >
-          Powered by the fusion of Actual + Artificial + Agentic intelligence
+          Powered by the fusion of Actual + Artificial + Agentic Intelligence
         </motion.p>
 
         <motion.div
@@ -70,28 +68,14 @@ export default function Hero() {
           </button>
           <Link
             to="/assessment"
+            target="_blank"
             className="group px-8 py-3.5 text-base font-semibold text-accent hover:text-accent-hover bg-transparent border border-accent/30 hover:border-accent/50 rounded-full transition-all no-underline flex items-center gap-2"
           >
             <Sparkles size={16} />
-            Find Your Intelligence Gap
+            Define Your Intelligence Gap
           </Link>
         </motion.div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2"
-        >
-          <div className="w-6 h-10 rounded-full border-2 border-border-bright flex items-start justify-center p-1.5">
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-              className="w-1.5 h-1.5 rounded-full bg-text-muted"
-            />
-          </div>
-        </motion.div>
       </div>
     </section>
   )
