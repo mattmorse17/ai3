@@ -3,11 +3,16 @@ import { ArrowLeft, FlaskConical } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
+interface CaseStudyStat {
+  label: string
+  value: string
+}
+
 interface CaseStudy {
   slug: string
   title: string
   category: string
-  stats: { label: string; value: string }[]
+  stats: CaseStudyStat[]
   before: string[]
   after: string[]
   content: string
@@ -46,7 +51,7 @@ The church did not need more staff. It needed a way to extend the intelligence o
 
 ## The Deployment
 
-AI\u00B3 deployed Now and Move together. Now captured the senior pastor\u2019s theological framework, communication style, and pastoral priorities. Move provided the agent fleet to execute across every operational function.
+AI³ deployed Now and Move together. Now captured the senior pastor\u2019s theological framework, communication style, and pastoral priorities. Move provided the agent fleet to execute across every operational function.
 
 **Sermon personalization** became the flagship use case. After each Sunday message, Now generated individualized follow-up content for every member \u2014 adapted based on their engagement history, life events (shared through care requests), small group participation, and previous sermon responses. A single mother received application points relevant to parenting alone. A retired couple received reflections on legacy and generativity. A college student received career and identity framing. Same sermon. Same voice. Radically different experience.
 
@@ -56,15 +61,15 @@ AI\u00B3 deployed Now and Move together. Now captured the senior pastor\u2019s t
 
 ## Expected Results
 
-Based on the AI\u00B3 architecture applied to a congregation of this size, the projected impact includes a 98.4% personalization rate across all member communications, a 340% increase in volunteer response rates due to better matching and timely asks, and visitor follow-up times dropping from days to minutes.
+Based on the AI³ architecture applied to a congregation of this size, the projected impact includes a 98.4% personalization rate across all member communications, a 340% increase in volunteer response rates due to better matching and timely asks, and visitor follow-up times dropping from days to minutes.
 
 These projections are modeled on the throughput capacity of the Move agent fleet and the personalization depth of the Now intelligence layer. Actual results will vary based on congregation engagement levels, data quality, and pastoral team involvement in training the system.
 
 ## Why It Matters
 
-Churches are not businesses, but they face the same scaling challenge every organization does: how to maintain intimacy as you grow. AI\u00B3 does not replace pastoral care. It extends it \u2014 ensuring that every member feels seen, known, and cared for, even in a community of thousands.
+Churches are not businesses, but they face the same scaling challenge every organization does: how to maintain intimacy as you grow. AI³ does not replace pastoral care. It extends it \u2014 ensuring that every member feels seen, known, and cared for, even in a community of thousands.
 
-The pastor\u2019s intelligence remains the foundation. AI\u00B3 simply makes sure that intelligence reaches every person, every week, without the pastoral team burning out.`,
+The pastor\u2019s intelligence remains the foundation. AI³ simply makes sure that intelligence reaches every person, every week, without the pastoral team burning out.`,
   },
   {
     slug: 'coaching-program',
@@ -108,7 +113,7 @@ Move provided the agent fleet. Now provided the intelligence layer that made eve
 
 ## Expected Results
 
-Projections based on the AI\u00B3 architecture for a D1 program of this scale: recruiting contact volume increases from approximately 300 to 2,400 per month. Response rates improve from 8% to 34% as personalization replaces templates. Coaching staff reclaims an estimated 40 hours per week previously spent on administrative recruiting tasks. Film analysis turnaround moves from days to same-day delivery.
+Projections based on the AI³ architecture for a D1 program of this scale: recruiting contact volume increases from approximately 300 to 2,400 per month. Response rates improve from 8% to 34% as personalization replaces templates. Coaching staff reclaims an estimated 40 hours per week previously spent on administrative recruiting tasks. Film analysis turnaround moves from days to same-day delivery.
 
 These projections assume full integration of the coaching staff\u2019s voice and evaluation criteria into the Now intelligence layer, and dedicated agent fleet deployment through Move. Results will vary based on conference, geographic recruiting territory, and staff engagement with the system.
 
@@ -116,7 +121,7 @@ These projections assume full integration of the coaching staff\u2019s voice and
 
 College athletics is an arms race, but the weapon is not always budget. It is operational leverage. A program that can contact eight times more recruits, respond to film in hours instead of days, and communicate with every player individually \u2014 while the coaching staff focuses on relationships and development \u2014 has an advantage that money alone cannot buy.
 
-AI\u00B3 does not replace coaches. It gives them back the time to do what only coaches can do: build culture, develop players, and win in person. Everything else runs autonomously.`,
+AI³ does not replace coaches. It gives them back the time to do what only coaches can do: build culture, develop players, and win in person. Everything else runs autonomously.`,
   },
   {
     slug: 'creator-scale',
@@ -150,7 +155,7 @@ The creator\u2019s voice was the brand. Hiring a generic social media manager ri
 
 ## The Deployment
 
-AI\u00B3 deployed a full agent fleet through Move, with Now powering the voice preservation and audience personalization layers.
+AI³ deployed a full agent fleet through Move, with Now powering the voice preservation and audience personalization layers.
 
 **Voice capture** was the critical first step. Now analyzed years of the creator\u2019s content \u2014 podcast transcripts, newsletters, social posts, interview clips \u2014 and built a comprehensive voice model. Not a generic tone. The specific vocabulary, cadence, humor, recurring themes, and conversational patterns that made this creator\u2019s audience loyal.
 
@@ -162,7 +167,7 @@ AI\u00B3 deployed a full agent fleet through Move, with Now powering the voice p
 
 ## Expected Results
 
-Projected outcomes based on the AI\u00B3 architecture for a creator at this scale: content output increases from three to thirty-plus pieces per week. Audience growth accelerates by an estimated 47% as consistent cross-platform presence compounds. Revenue grows approximately 280% through increased content monetization and optimized brand deal flow. The creator reclaims roughly 25 hours per week.
+Projected outcomes based on the AI³ architecture for a creator at this scale: content output increases from three to thirty-plus pieces per week. Audience growth accelerates by an estimated 47% as consistent cross-platform presence compounds. Revenue grows approximately 280% through increased content monetization and optimized brand deal flow. The creator reclaims roughly 25 hours per week.
 
 These projections model a creator with an established audience and active brand deal pipeline. Results depend on existing audience engagement, content quality, and the creator\u2019s willingness to let agents handle operational workflows while focusing on creative output.
 
@@ -170,9 +175,119 @@ These projections model a creator with an established audience and active brand 
 
 The creator economy has a scaling problem. Audiences want more content, more interaction, more presence \u2014 but creators are human. They burn out. They compromise quality. They miss opportunities because there are only so many hours in a day.
 
-AI\u00B3 solves this by separating the creative act from the operational machinery. The creator does the work that only they can do: think original thoughts, share authentic experiences, connect with their audience on a human level. Everything else \u2014 the repurposing, the distribution, the DMs, the deals \u2014 runs autonomously, in their voice, at a scale they could never sustain alone.
+AI³ solves this by separating the creative act from the operational machinery. The creator does the work that only they can do: think original thoughts, share authentic experiences, connect with their audience on a human level. Everything else \u2014 the repurposing, the distribution, the DMs, the deals \u2014 runs autonomously, in their voice, at a scale they could never sustain alone.
 
 The voice is preserved. The output is multiplied. And the creator gets their life back.`,
+  },
+  {
+    slug: 'education-district',
+    title: 'How a School District Personalized Learning for 12,000 Students',
+    category: 'Education',
+    stats: [
+      { label: 'Students', value: '12,000' },
+      { label: 'Personalized Lessons', value: '48,000/mo' },
+      { label: 'Teacher Time Saved', value: '15hrs/week' },
+      { label: 'Engagement Increase', value: '+62%' },
+    ],
+    before: [
+      'One-size-fits-all lesson plans delivered identically to every student regardless of learning style or ability',
+      'Teachers spent 15+ hours per week on grading, parent emails, and administrative paperwork',
+      'ESL students and students with learning differences received minimal accommodation beyond IEP minimums',
+      'Parent communication was sporadic and generic \u2014 progress reports sent quarterly with no personalization',
+      'Gifted students were under-challenged and disengaged, leading to behavioral issues',
+    ],
+    after: [
+      'Every student receives personalized lesson materials adapted to their learning style, pace, and language needs',
+      'Teachers reclaim 15 hours per week as grading, parent communication, and admin tasks are handled by agents',
+      'ESL students receive bilingual materials and simplified vocabulary; students with IEPs get format-optimized content',
+      'Parents receive weekly personalized progress updates in their preferred language with actionable recommendations',
+      'Gifted students receive accelerated and enriched content that keeps them challenged and engaged',
+    ],
+    content: `## The Challenge
+
+A suburban school district serving 12,000 students across eighteen schools faced a crisis that had nothing to do with funding. Teacher retention was dropping. Not because of pay, but because of workload. Teachers were spending more time on paperwork, grading, and parent emails than on actual instruction. The students who needed the most support \u2014 ESL learners, students with IEPs, and gifted students who were chronically under-challenged \u2014 were getting the least personalized attention because there simply was not enough time in the day.
+
+The district had tried edtech solutions before. Learning management systems that added more clicks. Assessment platforms that generated more data but not more insight. The technology was creating work, not eliminating it.
+
+## The Deployment
+
+AI³ deployed Now across the district\u2019s curriculum team and Move across its administrative operations.
+
+**Curriculum personalization** became the core use case. Teachers created lesson plans once using their existing workflows. Now analyzed each lesson against student profiles \u2014 reading level, language proficiency, learning style preferences, IEP accommodations, and historical engagement data \u2014 and generated personalized versions for every student in the class.
+
+A fourth-grade reading lesson looked different for every child. A student reading two grades below level received the same core story with simplified vocabulary, shorter passages, and guided comprehension questions. A student reading above grade level received extended passages with analytical prompts. An ESL student from a Vietnamese-speaking household received key vocabulary glossed in Vietnamese with visual context aids. A student with dyslexia received the content formatted for their assistive reading tools with audio reinforcement options.
+
+**Administrative automation** through Move transformed the teacher\u2019s workday. Agents graded assignments against teacher-defined rubrics, flagging only the edge cases that needed human judgment. Parent communication ran autonomously \u2014 weekly personalized progress updates sent in each family\u2019s home language with specific, actionable recommendations. Attendance tracking, IEP documentation updates, and reporting requirements flowed through agents instead of consuming planning periods and evenings.
+
+## Expected Results
+
+Projected outcomes based on the AI³ architecture deployed district-wide: 48,000 personalized lesson deliveries per month across all grade levels. Teachers reclaim an estimated 15 hours per week previously spent on grading and administrative tasks. Student engagement increases by approximately 62% as measured by assignment completion rates and time-on-task metrics. Parent satisfaction scores improve as communication becomes consistent, personalized, and proactive.
+
+These projections model a district with existing digital infrastructure and teacher willingness to integrate AI-assisted workflows. Results depend on the quality of student profile data, teacher participation in training the system, and administrative support for the transition.
+
+## Why It Matters
+
+Education\u2019s fundamental challenge is not a lack of great teachers. It is that the system asks each teacher to do the impossible: deliver personalized instruction to thirty different learners while simultaneously handling a crushing administrative load. AI³ does not solve this by replacing teachers. It solves it by removing the impossible constraint \u2014 giving every student a personalized experience while giving every teacher their time back.
+
+The district\u2019s teachers did not become less important. They became more effective. And their students, for the first time, each received instruction that met them exactly where they were.`,
+  },
+  {
+    slug: 'influencer-growth',
+    title: 'How an Influencer Scaled from 50K to 500K Followers Without Burning Out',
+    category: 'Creator',
+    stats: [
+      { label: 'Followers', value: '50K \u2192 500K' },
+      { label: 'Content Output', value: '15x' },
+      { label: 'Brand Deals', value: '+400%' },
+      { label: 'Hours Reclaimed', value: '30hrs/week' },
+    ],
+    before: [
+      'Posting three to four times per week on two platforms \u2014 the creator was maxed out',
+      'DMs piled up for days, missing brand deal opportunities and damaging audience trust',
+      'Newsletter had 50,000 subscribers but every edition was identical for every reader',
+      'Brand deal negotiation was manual and reactive \u2014 deals were often underpriced or missed entirely',
+      'Creator worked 70-hour weeks and was on the verge of quitting content entirely',
+    ],
+    after: [
+      'Publishing 45+ pieces of content per week across six platforms, all in the creator\u2019s authentic voice',
+      'DMs answered within minutes \u2014 agents handle routine inquiries and surface high-value conversations',
+      'Newsletter personalized for every subscriber segment \u2014 new subscribers, power readers, and lapsed readers each get different framing',
+      'Brand deal pipeline managed autonomously with proactive outreach to aligned brands and negotiation parameters set by the creator',
+      'Creator reclaims 30 hours per week and focuses exclusively on creative work and personal connection',
+    ],
+    content: `## The Challenge
+
+An influencer in the personal development space had built a loyal following of 50,000 across Instagram and YouTube. The audience was engaged. The brand deals were starting to come in. By every external measure, things were working. Internally, the creator was drowning.
+
+Three to four posts per week was the maximum output. Each one required ideation, scripting, recording, editing, captioning, and scheduling. DMs sat unanswered for days. The newsletter went out once a week to the entire list with zero personalization. Brand deal inquiries arrived by email and often went unread until the opportunity had passed. The creator was working seventy hours a week, producing less content than competitors with teams, and burning out fast.
+
+The obvious solution \u2014 hire a team \u2014 had a problem: the creator\u2019s voice was the product. Past attempts at outsourcing content had produced generic output that the audience immediately noticed and rejected.
+
+## The Deployment
+
+AI³ deployed Move for content and business operations and Now for voice preservation and audience personalization.
+
+**Voice capture** came first. Now analyzed two years of content: YouTube scripts, Instagram captions, newsletter editions, podcast appearances, and even DM conversations the creator flagged as representative of their tone. The system built a comprehensive voice model that captured not just what the creator said, but how they said it \u2014 the specific metaphors, the conversational cadence, the humor style, the recurring themes.
+
+**Content multiplication** transformed the output. The creator continued doing what they loved: recording one long-form video per week and writing one core newsletter. Agents handled everything downstream. Each video became twelve to fifteen derivative pieces: short-form clips for Reels and TikTok, quote graphics, Twitter threads, LinkedIn articles, Pinterest pins, and podcast clips. Each output was formatted for its platform and preserved the creator\u2019s voice because it was built from the voice model, not from generic templates.
+
+**Newsletter personalization** through Now turned a broadcast into a conversation. The weekly edition was no longer one email to 50,000 people. Subscribers who had just joined received a warmer, more introductory framing. Power readers who opened every edition received deeper content and direct asks. Subscribers who had gone quiet received re-engagement framing that referenced topics they had previously engaged with. Same core message. Different experience for every reader.
+
+**Brand deal operations** moved from reactive to proactive. The creator set parameters: minimum rates, preferred categories, brand alignment values, and deal-breakers. Agents monitored inbound inquiries, qualified them against these parameters, and managed initial negotiations. But Move also went proactive \u2014 identifying aligned brands that had not yet reached out and initiating conversations on the creator\u2019s behalf. The creator reviewed pre-vetted opportunities and made yes-or-no decisions.
+
+**DM management** became a growth engine instead of a guilt factory. Agents responded to routine messages in the creator\u2019s voice within minutes. Collaboration inquiries were qualified and routed. Fan messages that deserved personal attention were flagged. The creator spent thirty minutes a day on the DMs that mattered instead of three hours on the entire inbox.
+
+## Expected Results
+
+Projected outcomes based on the AI³ architecture for a creator at this growth stage: content output increases from four posts per week to sixty-plus pieces across six platforms. Follower growth trajectory accelerates toward 500,000 within twelve months as cross-platform presence compounds. Brand deal volume and value increase by approximately 400% through proactive pipeline management and optimized negotiation. The creator reclaims roughly 30 hours per week.
+
+These projections model an established creator with strong audience engagement and an authentic voice that translates well to the Now intelligence layer. Results depend on content quality, audience receptivity, and the creator\u2019s willingness to trust agents with operational workflows.
+
+## Why It Matters
+
+The creator economy rewards consistency and volume, but the human cost of producing both is unsustainable for solo operators. Most creators face a choice: burn out maintaining quality, or scale by diluting their voice. AI³ eliminates that choice by separating the creative signal from the operational machinery.
+
+The creator\u2019s voice, audience, and creative vision remain entirely theirs. Everything else \u2014 the distribution, the personalization, the negotiations, the community management \u2014 runs at a scale no individual could match, in a voice that sounds exactly like them. Because it was built from them.`,
   },
 ]
 
@@ -242,7 +357,7 @@ export default function CaseStudyDetail() {
           <div className="grid md:grid-cols-2 gap-6 mb-16">
             <div className="bg-bg-card border border-border rounded-2xl p-8">
               <h3 className="text-sm font-semibold uppercase tracking-wider text-red-400 mb-6">
-                Before AI\u00B3
+                Before AI³
               </h3>
               <ul className="space-y-4">
                 {study.before.map((item, i) => (
@@ -258,7 +373,7 @@ export default function CaseStudyDetail() {
             </div>
             <div className="bg-bg-card border border-accent/20 rounded-2xl p-8">
               <h3 className="text-sm font-semibold uppercase tracking-wider text-accent mb-6">
-                After AI\u00B3
+                After AI³
               </h3>
               <ul className="space-y-4">
                 {study.after.map((item, i) => (

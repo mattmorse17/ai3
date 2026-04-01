@@ -1,5 +1,6 @@
+import { useState, type FormEvent } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowLeft, Brain, Cpu, Bot, ArrowRight } from 'lucide-react'
+import { ArrowLeft, Brain, Cpu, Bot, ArrowRight, Check } from 'lucide-react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -21,14 +22,14 @@ const avatarData: Record<string, AvatarData> = {
   church: {
     title: 'Churches & Ministries',
     headline: 'One message.\nEvery heart.\nPersonally.',
-    subheadline: 'AI³ for Churches',
-    heroDescription: 'Your pastor\'s message is powerful. But it hits different for a new believer, a grieving parent, and a skeptical teenager. What if every person in your congregation received the message they specifically needed — without changing a word of the sermon?',
+    subheadline: 'AI\u00B3 for Churches',
+    heroDescription: 'Your pastor\'s message is powerful. But it hits different for a new believer, a grieving parent, and a skeptical teenager. What if every person in your congregation received the message they specifically needed \u2014 without changing a word of the sermon?',
     actual: {
       title: 'Your Pastor\'s Heart',
       points: [
-        'The sermon, the theology, the pastoral care — this is irreplaceable',
-        'AI³ doesn\'t write your sermons. It makes sure every word lands exactly where it needs to',
-        'Your congregation feels personally known — because the system knows them',
+        'The sermon, the theology, the pastoral care \u2014 this is irreplaceable',
+        'AI\u00B3 doesn\'t write your sermons. It makes sure every word lands exactly where it needs to',
+        'Your congregation feels personally known \u2014 because the system knows them',
       ],
     },
     artificial: {
@@ -36,7 +37,7 @@ const avatarData: Record<string, AvatarData> = {
       points: [
         'Now transforms a single message into a personalized experience for every listener',
         'The new believer gets deeper context. The veteran gets challenged. The hurting get comfort.',
-        'Sermon notes, devotionals, and follow-up materials — generated, personalized, delivered',
+        'Sermon notes, devotionals, and follow-up materials \u2014 generated, personalized, delivered',
       ],
     },
     agentic: {
@@ -48,17 +49,17 @@ const avatarData: Record<string, AvatarData> = {
         'Giving campaigns that speak to each person\'s specific connection to the mission',
       ],
     },
-    result: 'Imagine a church where every single person feels like the pastor is speaking directly to them. Where no visitor falls through the cracks. Where your message reaches 10x more people — each one personally. That\'s AI³.',
+    result: 'Imagine a church where every single person feels like the pastor is speaking directly to them. Where no visitor falls through the cracks. Where your message reaches 10x more people \u2014 each one personally. That\'s AI\u00B3.',
   },
   sports: {
     title: 'Sports Coaches',
     headline: 'Recruit smarter.\nDevelop faster.\nWin more.',
-    subheadline: 'AI³ for Sports',
-    heroDescription: 'The best coaches already have the eye. The philosophy. The ability to develop players. But there aren\'t enough hours to recruit, scout, develop, and game-plan at the level your program demands. AI³ gives you a staff that never sleeps.',
+    subheadline: 'AI\u00B3 for Sports',
+    heroDescription: 'The best coaches already have the eye. The philosophy. The ability to develop players. But there aren\'t enough hours to recruit, scout, develop, and game-plan at the level your program demands. AI\u00B3 gives you a staff that never sleeps.',
     actual: {
       title: 'Your Coaching Philosophy',
       points: [
-        'Your system, your culture, your eye for talent — embedded into every agent',
+        'Your system, your culture, your eye for talent \u2014 embedded into every agent',
         'The AI doesn\'t coach. You coach. It executes your framework at scale.',
         'Player development plans that reflect YOUR methodology, not generic templates',
       ],
@@ -74,25 +75,25 @@ const avatarData: Record<string, AvatarData> = {
     agentic: {
       title: 'The Staff That Never Sleeps',
       points: [
-        'Recruiting outreach that\'s personal, timely, and relentless — 24/7',
+        'Recruiting outreach that\'s personal, timely, and relentless \u2014 24/7',
         'Player check-ins and development tracking between sessions',
         'Social media and brand building that positions your program as elite',
         'NIL support and compliance documentation handled automatically',
       ],
     },
-    result: 'The programs that win in the next decade won\'t just have the best coaches. They\'ll have the best intelligence systems. AI³ gives your program a competitive advantage that compounds every single day.',
+    result: 'The programs that win in the next decade won\'t just have the best coaches. They\'ll have the best intelligence systems. AI\u00B3 gives your program a competitive advantage that compounds every single day.',
   },
   performance: {
     title: 'Coaches & Consultants',
     headline: 'Done with Zoom fatigue?\nMaximize every minute.',
-    subheadline: 'AI³ for Coaches & Consultants',
-    heroDescription: 'You\'re spending hours on Zoom and your clients are exhausted too. The problem isn\'t your methodology — it\'s that every session requires you to be live, present, and on. AI³ maximizes the impact of every 1:1 so your clients get more from less, and you get your life back.',
+    subheadline: 'AI\u00B3 for Coaches & Consultants',
+    heroDescription: 'You\'re spending hours on Zoom and your clients are exhausted too. The problem isn\'t your methodology \u2014 it\'s that every session requires you to be live, present, and on. AI\u00B3 maximizes the impact of every 1:1 so your clients get more from less, and you get your life back.',
     actual: {
       title: 'Your Methodology',
       points: [
-        'Your coaching framework, your expertise, your ability to transform people — this is irreplaceable',
-        'AI³ encodes your methodology so deeply that clients feel YOUR coaching between sessions',
-        'Every framework, every exercise, every insight — delivered your way, on your terms',
+        'Your coaching framework, your expertise, your ability to transform people \u2014 this is irreplaceable',
+        'AI\u00B3 encodes your methodology so deeply that clients feel YOUR coaching between sessions',
+        'Every framework, every exercise, every insight \u2014 delivered your way, on your terms',
       ],
     },
     artificial: {
@@ -106,25 +107,25 @@ const avatarData: Record<string, AvatarData> = {
     agentic: {
       title: 'Your Practice on Autopilot',
       points: [
-        'Daily check-ins with every client — not just your top-tier ones',
+        'Daily check-ins with every client \u2014 not just your top-tier ones',
         'Session prep and post-session follow-up generated automatically',
         'A content engine that turns your ideas into books, courses, and programs',
         'Lead gen and client acquisition that runs while you sleep',
-        'Clients get 10x the value from every Zoom because AI³ handles everything in between',
+        'Clients get 10x the value from every Zoom because AI\u00B3 handles everything in between',
       ],
     },
-    result: 'The best coaches and consultants are limited by time. AI³ removes that constraint. Your methodology reaches 100x more people — and every Zoom session becomes 10x more valuable because the intelligence layer handles everything in between.',
+    result: 'The best coaches and consultants are limited by time. AI\u00B3 removes that constraint. Your methodology reaches 100x more people \u2014 and every Zoom session becomes 10x more valuable because the intelligence layer handles everything in between.',
   },
   influencer: {
     title: 'Influencers & Creators',
     headline: 'Your voice.\nEvery platform.\nAuthentically.',
-    subheadline: 'AI³ for Creators',
-    heroDescription: 'Your audience follows YOU — your voice, your personality, your perspective. But the demands of content creation, brand deals, DMs, and community management are crushing. AI³ amplifies your authentic voice across every platform without diluting it.',
+    subheadline: 'AI\u00B3 for Creators',
+    heroDescription: 'Your audience follows YOU \u2014 your voice, your personality, your perspective. But the demands of content creation, brand deals, DMs, and community management are crushing. AI\u00B3 amplifies your authentic voice across every platform without diluting it.',
     actual: {
       title: 'Your Authentic Voice',
       points: [
-        'Your personality, your takes, your creative instincts — this is what people follow',
-        'AI³ learns how you think, speak, and create — then amplifies it',
+        'Your personality, your takes, your creative instincts \u2014 this is what people follow',
+        'AI\u00B3 learns how you think, speak, and create \u2014 then amplifies it',
         'Nothing goes out that doesn\'t sound like you, because the system IS trained on you',
       ],
     },
@@ -133,7 +134,7 @@ const avatarData: Record<string, AvatarData> = {
       points: [
         'Content ideation based on what\'s trending in YOUR niche, not generic recommendations',
         'Audience analysis that reveals what your people actually want more of',
-        'Cross-platform adaptation — one idea becomes a reel, a tweet, a newsletter, and a podcast clip',
+        'Cross-platform adaptation \u2014 one idea becomes a reel, a tweet, a newsletter, and a podcast clip',
       ],
     },
     agentic: {
@@ -145,18 +146,18 @@ const avatarData: Record<string, AvatarData> = {
         'Community building that turns casual followers into paying superfans',
       ],
     },
-    result: 'The creators who win aren\'t the ones who post the most. They\'re the ones whose authentic voice reaches the most people. AI³ gives you a media team that runs on your creative DNA.',
+    result: 'The creators who win aren\'t the ones who post the most. They\'re the ones whose authentic voice reaches the most people. AI\u00B3 gives you a media team that runs on your creative DNA.',
   },
   business: {
     title: 'Business Owners',
     headline: 'Run your company\nwith a fleet of\nAI operators.',
-    subheadline: 'AI³ for Business',
-    heroDescription: 'You started your business to build something — not to be trapped managing every detail. AI³ gives you a named fleet of AI operators that run your marketing, sales, fulfillment, and support so you can focus on what only you can do.',
+    subheadline: 'AI\u00B3 for Business',
+    heroDescription: 'You started your business to build something \u2014 not to be trapped managing every detail. AI\u00B3 gives you a named fleet of AI operators that run your marketing, sales, fulfillment, and support so you can focus on what only you can do.',
     actual: {
       title: 'Your Vision & Expertise',
       points: [
         'You know your market, your customers, and your competitive advantage',
-        'AI³ encodes that knowledge into agents that make decisions the way you would',
+        'AI\u00B3 encodes that knowledge into agents that make decisions the way you would',
         'The strategic thinking stays with you. The execution runs itself.',
       ],
     },
@@ -177,20 +178,20 @@ const avatarData: Record<string, AvatarData> = {
         'Support agents that resolve 80% of issues without human intervention',
       ],
     },
-    result: 'The next generation of businesses won\'t have bigger teams. They\'ll have smarter systems. AI³ is the operating layer that lets a 5-person company operate like a 50-person one.',
+    result: 'The next generation of businesses won\'t have bigger teams. They\'ll have smarter systems. AI\u00B3 is the operating layer that lets a 5-person company operate like a 50-person one.',
     caseStudyName: 'Kaifect',
-    caseStudyQuote: 'An AI³ Powered Growth Partner running 50+ clients with AI³ as its operating system. Proving the model works before we ever sold it as a product.',
+    caseStudyQuote: 'An AI\u00B3 Powered Growth Partner running 50+ clients with AI\u00B3 as its operating system. Proving the model works before we ever sold it as a product.',
   },
   creator: {
     title: 'Chaotic Creators',
     headline: '100 ideas a day?\nNow they all\nget executed.',
-    subheadline: 'AI³ for Creators Who Can\'t Sit Still',
-    heroDescription: 'Your brain moves at 1,000 mph. You have more ideas before breakfast than most people have all year. The problem was never creativity — it was execution. AI³ is the bridge between your vision and reality.',
+    subheadline: 'AI\u00B3 for Creators Who Can\'t Sit Still',
+    heroDescription: 'Your brain moves at 1,000 mph. You have more ideas before breakfast than most people have all year. The problem was never creativity \u2014 it was execution. AI\u00B3 is the bridge between your vision and reality.',
     actual: {
       title: 'Your Raw Creative Energy',
       points: [
         'The rapid-fire thinking, the connections no one else sees, the relentless drive',
-        'AI³ doesn\'t slow you down with process — it keeps up with you',
+        'AI\u00B3 doesn\'t slow you down with process \u2014 it keeps up with you',
         'Voice memo in, executed project out. That\'s the workflow.',
       ],
     },
@@ -206,23 +207,23 @@ const avatarData: Record<string, AvatarData> = {
       title: 'Execution at Your Speed',
       points: [
         'Every idea gets assigned to an agent that builds it, tests it, and ships it',
-        'Content across every platform — created, scheduled, and posted while you think of the next thing',
+        'Content across every platform \u2014 created, scheduled, and posted while you think of the next thing',
         'Projects that used to die in your notes app now get built in days',
-        'A system that matches your pace — finally',
+        'A system that matches your pace \u2014 finally',
       ],
     },
-    result: 'You were never the problem. The world just couldn\'t keep up with you. AI³ can. Every idea gets executed. Every project gets shipped. Every vision becomes reality.',
+    result: 'You were never the problem. The world just couldn\'t keep up with you. AI\u00B3 can. Every idea gets executed. Every project gets shipped. Every vision becomes reality.',
   },
   education: {
     title: 'Education & Classrooms',
     headline: 'Every student gets\na personalized\nexperience.',
-    subheadline: 'AI³ for Education',
-    heroDescription: 'Every classroom has students at different levels, with different learning styles, speaking different languages. What if your curriculum automatically adapted to each one — without changing what you teach?',
+    subheadline: 'AI\u00B3 for Education',
+    heroDescription: 'Every classroom has students at different levels, with different learning styles, speaking different languages. What if your curriculum automatically adapted to each one \u2014 without changing what you teach?',
     actual: {
       title: 'Your Teaching Expertise',
       points: [
         'Your curriculum, your pedagogy, your ability to connect with students. This is irreplaceable.',
-        'AI³ doesn\'t replace teachers. It amplifies every lesson so it lands for every student.',
+        'AI\u00B3 doesn\'t replace teachers. It amplifies every lesson so it lands for every student.',
         'Your teaching philosophy becomes the foundation for personalized learning at scale.',
       ],
     },
@@ -240,16 +241,22 @@ const avatarData: Record<string, AvatarData> = {
         'Personalized study materials generated for every student after every class.',
         'Parent communication and progress updates handled automatically.',
         'Homework help and tutoring available 24/7, aligned to your curriculum.',
-        'Administrative tasks — grading, scheduling, reporting — running in the background.',
+        'Administrative tasks \u2014 grading, scheduling, reporting \u2014 running in the background.',
       ],
     },
-    result: 'Imagine a classroom where every student feels like the lesson was designed just for them. Where no one falls behind because they learn differently. Where teachers are freed from admin to do what they do best — teach. That\'s AI³ for Education.',
+    result: 'Imagine a classroom where every student feels like the lesson was designed just for them. Where no one falls behind because they learn differently. Where teachers are freed from admin to do what they do best \u2014 teach. That\'s AI\u00B3 for Education.',
   },
 }
 
 export default function AvatarPage() {
   const { slug } = useParams<{ slug: string }>()
   const data = slug ? avatarData[slug] : null
+
+  const [email, setEmail] = useState('')
+  const [interest, setInterest] = useState('')
+  const [investInterest, setInvestInterest] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   if (!data) return <Navigate to="/" replace />
 
@@ -263,6 +270,24 @@ export default function AvatarPage() {
     document.getElementById('avatar-waitlist')?.scrollIntoView({ behavior: 'smooth' })
   }
 
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault()
+    if (!email) return
+    setLoading(true)
+
+    try {
+      const leads = JSON.parse(localStorage.getItem('ai3_leads') || '[]')
+      leads.push({ email, interest, investInterest, source: slug, timestamp: new Date().toISOString() })
+      localStorage.setItem('ai3_leads', JSON.stringify(leads))
+    } catch {
+      // silent
+    }
+
+    await new Promise(r => setTimeout(r, 600))
+    setSubmitted(true)
+    setLoading(false)
+  }
+
   return (
     <div className="min-h-screen bg-bg">
       <Navbar />
@@ -274,7 +299,7 @@ export default function AvatarPage() {
         <div className="relative max-w-4xl mx-auto text-center">
           <Link to="/" className="inline-flex items-center gap-1 text-sm text-text-muted hover:text-white transition-colors mb-8 no-underline">
             <ArrowLeft size={16} />
-            Back to AI³
+            Back to AI\u00B3
           </Link>
 
           <motion.p
@@ -375,7 +400,7 @@ export default function AvatarPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA with Waitlist Form */}
       <section id="avatar-waitlist" className="py-24 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div
@@ -383,19 +408,71 @@ export default function AvatarPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent mb-4">Request an Invite</p>
             <h2 className="text-4xl sm:text-5xl font-black tracking-[-0.03em] mb-6">
               Ready to see it in action?
             </h2>
             <p className="text-text-secondary text-lg mb-10">
-              Request an invite for early access to Now and Move — the products that power AI³.
+              Request an invite for early access to Now and Move — the products that power AI\u00B3.
             </p>
-            <a
-              href="mailto:hello@makeyourmove.ai?subject=AI³ Interest — {data.title}"
-              className="inline-flex items-center gap-2 px-10 py-4 text-lg font-semibold text-black font-bold bg-gradient-to-r from-gradient-start to-gradient-end hover:opacity-90 rounded-full transition-all no-underline glow"
-            >
-              Request an Invite
-              <ArrowRight size={20} />
-            </a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            {submitted ? (
+              <div className="inline-flex items-center gap-3 px-6 py-4 rounded-full bg-green-500/10 border border-green-500/20 text-green-400">
+                <Check size={20} />
+                <span className="font-medium">You're on the list. We'll be in touch.</span>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="flex flex-col items-center gap-4 max-w-md mx-auto">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
+                  className="w-full px-5 py-3.5 rounded-full bg-bg-card border border-border text-white placeholder-text-muted outline-none focus:border-accent transition-colors text-base"
+                />
+                <select
+                  value={interest}
+                  onChange={(e) => setInterest(e.target.value)}
+                  className="w-full px-5 py-3.5 rounded-full bg-bg-card border border-border text-white outline-none focus:border-accent transition-colors text-base appearance-none cursor-pointer"
+                >
+                  <option value="" disabled>What are you most interested in?</option>
+                  <option value="now">Now — Personalized Intelligence</option>
+                  <option value="move">Move — AI Command Center</option>
+                  <option value="both">Both Now + Move</option>
+                </select>
+                <label className="flex items-center gap-3 cursor-pointer self-start pl-2">
+                  <input
+                    type="checkbox"
+                    checked={investInterest}
+                    onChange={(e) => setInvestInterest(e.target.checked)}
+                    className="w-4 h-4 rounded border-border accent-accent cursor-pointer"
+                  />
+                  <span className="text-sm text-text-secondary">I'm also interested in investing in AI\u00B3</span>
+                </label>
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full sm:w-auto px-6 py-3.5 text-base font-semibold text-black bg-accent hover:bg-accent-hover disabled:opacity-50 rounded-full transition-all cursor-pointer border-none flex items-center justify-center gap-2"
+                >
+                  {loading ? (
+                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  ) : (
+                    <>
+                      Request Invite
+                      <ArrowRight size={18} />
+                    </>
+                  )}
+                </button>
+              </form>
+            )}
           </motion.div>
         </div>
       </section>

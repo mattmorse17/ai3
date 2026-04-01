@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Brain, Sparkles, HeadphonesIcon, CheckCircle, PenTool, BarChart3 } from 'lucide-react'
+import { ArrowRight, Brain, Sparkles, HeadphonesIcon, CheckCircle, PenTool, BarChart3, GraduationCap, Trophy, Calendar, Palette, Server, Eye } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -59,6 +59,60 @@ const agents = [
     gradient: 'from-indigo-500 to-blue-400',
     icon: BarChart3,
   },
+  {
+    initials: 'LN',
+    name: 'Luna',
+    role: 'Education Specialist',
+    description:
+      'Personalizes curriculum delivery, adapts lessons for every learning style, and automates classroom administration.',
+    gradient: 'from-sky-500 to-blue-400',
+    icon: GraduationCap,
+  },
+  {
+    initials: 'OR',
+    name: 'Orion',
+    role: 'Sports Intelligence',
+    description:
+      'Analyzes film, automates recruiting pipelines, and personalizes player development communication.',
+    gradient: 'from-amber-500 to-yellow-400',
+    icon: Trophy,
+  },
+  {
+    initials: 'EC',
+    name: 'Echo',
+    role: 'Event Coordinator',
+    description:
+      'Plans, promotes, and executes events end-to-end. From invitations to follow-up, nothing falls through.',
+    gradient: 'from-teal-500 to-emerald-400',
+    icon: Calendar,
+  },
+  {
+    initials: 'PX',
+    name: 'Phoenix',
+    role: 'Brand Voice Architect',
+    description:
+      'Captures and preserves your authentic voice across every channel, ensuring consistency at any scale.',
+    gradient: 'from-red-500 to-orange-400',
+    icon: Palette,
+  },
+  {
+    initials: 'TN',
+    name: 'Titan',
+    role: 'Infrastructure & DevOps',
+    description:
+      'Manages servers, deployments, and system health. Keeps the engine running so you never think about it.',
+    gradient: 'from-slate-500 to-zinc-400',
+    icon: Server,
+  },
+  {
+    initials: 'IR',
+    name: 'Iris',
+    role: 'Data & Analytics',
+    description:
+      'Transforms raw data into actionable insights. Dashboards, reports, and trend analysis delivered automatically.',
+    gradient: 'from-fuchsia-500 to-purple-400',
+    icon: Eye,
+  },
 ]
 
 const founderStats = [
@@ -83,9 +137,11 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-[-0.04em] leading-[0.95] mb-6"
           >
-            Built by humans.
+            Built by Human Intelligence.
             <br />
-            <span className="gradient-text">Run by intelligence.</span>
+            Enhanced by Artificial Intelligence.
+            <br />
+            <span className="gradient-text">Run by Agentic Intelligence.</span>
           </motion.h1>
 
           <motion.p
@@ -131,8 +187,7 @@ export default function About() {
                 <h3 className="text-2xl font-black mb-1">Matt Morse</h3>
                 <p className="text-accent font-semibold mb-4">Founder & CEO</p>
                 <p className="text-text-secondary leading-relaxed mb-6">
-                  10 years building AI-powered businesses. Started with Kaifect as an AI&#179; Powered Growth Partner,
-                  evolved into the AI&#179; methodology. Based in Franklin, TN.
+                  Matt Morse has spent the past decade building, growing, optimizing, and scaling businesses across dozens of industries. From startups to established brands, the pattern was always the same: the bottleneck was never the strategy — it was the execution. AI&#179; is the system that removes that bottleneck forever. By fusing human expertise with AI models and autonomous agents, AI&#179; makes it possible for any individual or organization to operate at a level that was previously impossible.
                 </p>
                 <p className="text-white/80 italic border-l-2 border-accent pl-4 mb-8">
                   "AI should amplify human intelligence, not replace it."
@@ -168,7 +223,7 @@ export default function About() {
               The AI&#179; Agent Team
             </h2>
             <p className="text-text-secondary text-lg max-w-xl mx-auto">
-              Six specialized agents working in concert. Always on, always learning.
+              Twelve specialized agents working in concert. Always on, always learning.
             </p>
           </motion.div>
 
@@ -228,13 +283,18 @@ export default function About() {
             transition={{ delay: 0.15 }}
             className="mt-12 grid sm:grid-cols-3 gap-4"
           >
-            {['Automation', 'Augmentation', 'Autonomy'].map((pillar, i) => (
+            {[
+              { name: 'Actual Intelligence', desc: 'Your irreplaceable human expertise, intuition, and voice. The signal that everything else amplifies.' },
+              { name: 'Artificial Intelligence', desc: 'Context-aware AI that understands your domain deeply enough to personalize at scale.' },
+              { name: 'Agentic Intelligence', desc: 'Autonomous operators that execute your playbook 24/7 without losing quality or context.' },
+            ].map((pillar, i) => (
               <div
-                key={pillar}
+                key={pillar.name}
                 className="bg-bg-card border border-border rounded-2xl p-6"
               >
                 <span className="text-4xl font-black text-white/[0.04] block mb-2">A{i + 1}</span>
-                <span className="text-lg font-bold gradient-text">{pillar}</span>
+                <span className="text-lg font-bold gradient-text block mb-2">{pillar.name}</span>
+                <p className="text-sm text-text-secondary leading-relaxed">{pillar.desc}</p>
               </div>
             ))}
           </motion.div>
@@ -259,7 +319,7 @@ export default function About() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/invest"
-                className="inline-flex items-center justify-center gap-2 px-10 py-4 text-lg font-semibold text-white bg-gradient-to-r from-gradient-start to-gradient-end hover:opacity-90 rounded-full transition-all no-underline glow"
+                className="inline-flex items-center justify-center gap-2 px-10 py-4 text-lg font-semibold text-black bg-accent hover:bg-accent-hover rounded-full transition-all no-underline"
               >
                 Invest in AI&#179;
                 <ArrowRight size={20} />

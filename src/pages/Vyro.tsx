@@ -18,6 +18,8 @@ import {
   Cpu,
   Rocket,
   LineChart,
+  Brain,
+  Sparkles,
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
@@ -57,7 +59,7 @@ const stages = [
     step: '03',
     title: 'Automate',
     icon: Cpu,
-    description: 'Deploy AI\u00B3 agents across the entire operation. Implement HyperOptimization\u2122 on marketing, sales, fulfillment, and support.',
+    description: 'Deploy AI\u00B3 agents across the entire operation. Implement HyperOptimization on marketing, sales, fulfillment, and support.',
   },
   {
     step: '04',
@@ -106,13 +108,13 @@ const stats = [
 /* ---------- forms ---------- */
 
 function BusinessSubmitForm() {
-  const [form, setForm] = useState({ name: '', revenue: '', industry: '' })
+  const [form, setForm] = useState({ name: '', email: '', businessName: '', revenue: '', industry: '' })
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    if (!form.name || !form.revenue || !form.industry) return
+    if (!form.name || !form.email || !form.businessName || !form.revenue || !form.industry) return
     setLoading(true)
     try {
       const leads = JSON.parse(localStorage.getItem('vyro_leads') || '[]')
@@ -133,31 +135,56 @@ function BusinessSubmitForm() {
     )
   }
 
+  const inputClass = "w-full px-5 py-3.5 rounded-xl bg-bg-card border border-border text-white placeholder-text-muted outline-none focus:border-accent transition-colors text-base"
+  const selectClass = "w-full px-5 py-3.5 rounded-xl bg-bg-card border border-border text-white outline-none focus:border-accent transition-colors text-base appearance-none"
+
   return (
     <form onSubmit={handleSubmit} className="space-y-4 w-full">
       <input
         type="text"
         value={form.name}
         onChange={(e) => setForm(f => ({ ...f, name: e.target.value }))}
-        placeholder="Business Name"
+        placeholder="Your Name"
         required
-        className="w-full px-5 py-3.5 rounded-xl bg-bg-card border border-border text-white placeholder-text-muted outline-none focus:border-accent transition-colors text-base"
+        className={inputClass}
+      />
+      <input
+        type="email"
+        value={form.email}
+        onChange={(e) => setForm(f => ({ ...f, email: e.target.value }))}
+        placeholder="Email Address"
+        required
+        className={inputClass}
       />
       <input
         type="text"
+        value={form.businessName}
+        onChange={(e) => setForm(f => ({ ...f, businessName: e.target.value }))}
+        placeholder="Business Name"
+        required
+        className={inputClass}
+      />
+      <select
         value={form.revenue}
         onChange={(e) => setForm(f => ({ ...f, revenue: e.target.value }))}
-        placeholder="Annual Revenue (e.g. $500K, $2M)"
         required
-        className="w-full px-5 py-3.5 rounded-xl bg-bg-card border border-border text-white placeholder-text-muted outline-none focus:border-accent transition-colors text-base"
-      />
+        className={selectClass}
+        style={{ color: form.revenue ? 'white' : '#6b7280' }}
+      >
+        <option value="" disabled>Annual Revenue</option>
+        <option value="under-500k">Under $500K</option>
+        <option value="500k-1m">$500K - $1M</option>
+        <option value="1m-5m">$1M - $5M</option>
+        <option value="5m-10m">$5M - $10M</option>
+        <option value="10m+">$10M+</option>
+      </select>
       <input
         type="text"
         value={form.industry}
         onChange={(e) => setForm(f => ({ ...f, industry: e.target.value }))}
         placeholder="Industry"
         required
-        className="w-full px-5 py-3.5 rounded-xl bg-bg-card border border-border text-white placeholder-text-muted outline-none focus:border-accent transition-colors text-base"
+        className={inputClass}
       />
       <button
         type="submit"
@@ -351,7 +378,7 @@ export default function Vyro() {
         <div className="absolute inset-0 bg-grid opacity-20" />
         <div className="relative max-w-6xl mx-auto">
           <motion.div {...fadeUp} className="text-center mb-16">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent mb-4">HyperOptimization&trade;</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent mb-4">HyperOptimization</p>
             <h2 className="text-4xl sm:text-5xl font-black tracking-[-0.03em] leading-tight mb-4">
               What happens when AI&#179;<br />enters a business.
             </h2>
@@ -381,24 +408,31 @@ export default function Vyro() {
             })}
           </div>
 
-          {/* AI3 Stack breakdown */}
+          {/* A+A+A Stack breakdown -- card format matching Thesis section */}
           <motion.div {...fadeUp} className="mt-12 max-w-4xl mx-auto">
-            <div className="grid sm:grid-cols-3 gap-4">
+            <div className="grid sm:grid-cols-3 gap-6">
               {[
-                { label: 'Actual Intelligence', desc: 'Human operators with domain expertise evaluate and run businesses.' },
-                { label: 'Artificial Intelligence', desc: 'AI models analyze operations, find inefficiencies, predict growth.' },
-                { label: 'Agentic Intelligence', desc: 'Move agent fleets automate marketing, sales, fulfillment, support.' },
-              ].map((item, i) => (
-                <motion.div
-                  key={item.label}
-                  {...stagger}
-                  transition={{ duration: 0.5, delay: 0.15 * i }}
-                  className="p-6 rounded-2xl border border-accent/20 bg-gradient-to-b from-accent/5 to-transparent text-center"
-                >
-                  <p className="text-accent font-bold text-sm uppercase tracking-wide mb-2">{item.label}</p>
-                  <p className="text-text-secondary text-sm leading-relaxed">{item.desc}</p>
-                </motion.div>
-              ))}
+                { icon: Brain, label: 'Actual Intelligence', desc: 'Human operators with domain expertise evaluate and run businesses.' },
+                { icon: Cpu, label: 'Artificial Intelligence', desc: 'AI models analyze operations, find inefficiencies, predict growth.' },
+                { icon: Sparkles, label: 'Agentic Intelligence', desc: 'Move agent fleets automate marketing, sales, fulfillment, support.' },
+              ].map((item, i) => {
+                const Icon = item.icon
+                return (
+                  <motion.div
+                    key={item.label}
+                    {...stagger}
+                    transition={{ duration: 0.5, delay: 0.15 * i }}
+                    className="p-6 rounded-2xl border border-accent/20 bg-bg-card overflow-hidden relative"
+                  >
+                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-accent/0" />
+                    <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-3">
+                      <Icon className="text-accent" size={20} />
+                    </div>
+                    <p className="text-accent font-bold text-sm uppercase tracking-wide mb-2 text-center">{item.label}</p>
+                    <p className="text-text-secondary text-sm leading-relaxed text-center">{item.desc}</p>
+                  </motion.div>
+                )
+              })}
             </div>
           </motion.div>
         </div>
@@ -455,7 +489,7 @@ export default function Vyro() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Hire Vyro to Optimize</h3>
               <p className="text-text-secondary leading-relaxed mb-4">
-                Not ready to sell? We'll implement HyperOptimization&trade; across your operation. You keep full ownership. AI&#179; agents run the day-to-day while you focus on strategy.
+                Not ready to sell? We'll implement HyperOptimization across your operation. You keep full ownership. AI&#179; agents run the day-to-day while you focus on strategy.
               </p>
               <ul className="space-y-2">
                 {['Full ownership retained', 'AI\u00B3 agents deployed to your business', '3-10x growth without proportional headcount'].map(item => (

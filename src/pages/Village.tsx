@@ -9,15 +9,11 @@ import {
   Bot,
   TreePine,
   TrendingUp,
-  MapPin,
   Wifi,
   Battery,
   ArrowRight,
   Check,
-  Thermometer,
   Lock,
-  Package,
-  Flame,
   Users,
   Brain,
   Cpu,
@@ -59,7 +55,7 @@ const features = [
       'Covered patio with retractable screens',
       'Grilling island & outdoor kitchen',
       'Optional hot tub, pool, or firepit',
-      'Designed for year-round Nashville weather',
+      'Designed for year-round enjoyment',
     ],
   },
   {
@@ -105,10 +101,10 @@ const features = [
 ]
 
 const stats = [
-  { value: '30', label: 'Custom Homes' },
-  { value: '$1M', label: 'Starting Price' },
-  { value: '$1.6M+', label: 'Projected Resale' },
-  { value: '2027', label: 'Target Completion' },
+  { value: 'Custom', label: 'Designs' },
+  { value: 'Smart', label: 'Everything' },
+  { value: 'Robot', label: 'Built' },
+  { value: 'AI\u00B3', label: 'Powered' },
 ]
 
 const intelligences = [
@@ -168,19 +164,6 @@ export default function Village() {
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
 
         <div className="relative max-w-5xl mx-auto text-center">
-          {/* badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5 mb-10"
-          >
-            <MapPin size={14} className="text-accent" />
-            <span className="text-xs font-semibold uppercase tracking-[0.15em] text-accent">
-              Near Nashville, TN
-            </span>
-          </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -196,18 +179,27 @@ export default function Village() {
             transition={{ duration: 0.8, delay: 0.15 }}
             className="text-xl sm:text-2xl text-text-secondary max-w-3xl mx-auto mb-4 leading-relaxed font-medium"
           >
-            The first full-stack modern-living barndominium community.
+            Communities of smart barndominiums designed for the future of living.
           </motion.p>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.25 }}
+            className="text-base sm:text-lg text-text-muted max-w-2xl mx-auto mb-6"
+          >
+            Built using innovative robotics-driven construction methods that do more with less.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
             className="text-base sm:text-lg text-text-muted max-w-2xl mx-auto mb-12"
           >
-            30 custom homes. Smart everything. Robot-ready.{' '}
+            Smart everything. Robot-ready.{' '}
             <Link to="/" className="text-accent hover:underline no-underline font-semibold">
-              Powered by AI&sup3;
+              Powered by AI&#179;
             </Link>
             .
           </motion.p>
@@ -261,7 +253,7 @@ export default function Village() {
             The Village is a connected living environment where your home thinks, adapts, and
             maintains itself. Every unit is orchestrated by the{' '}
             <Link to="/" className="text-accent hover:underline no-underline font-semibold">
-              AI&sup3; intelligence layer
+              AI&#179; intelligence layer
             </Link>{' '}
             -- smart home automation, predictive maintenance, community coordination, and
             infrastructure ready for the humanoid robots arriving by 2027.
@@ -322,7 +314,7 @@ export default function Village() {
         <div className="relative max-w-5xl mx-auto">
           <motion.div {...fadeUp} className="text-center mb-16">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent mb-4">
-              The Numbers
+              The Standard
             </p>
             <h2 className="text-4xl sm:text-5xl font-black tracking-[-0.03em]">
               Built for value. <span className="gradient-text">Designed for growth.</span>
@@ -359,7 +351,7 @@ export default function Village() {
             >
               <Zap size={14} className="text-accent" />
               <span className="text-xs font-semibold uppercase tracking-[0.15em] text-accent">
-                Powered by AI&sup3;
+                Powered by AI&#179;
               </span>
             </Link>
             <h2 className="text-4xl sm:text-5xl font-black tracking-[-0.03em] leading-tight mb-4">
@@ -367,7 +359,7 @@ export default function Village() {
               <span className="gradient-text">One living environment.</span>
             </h2>
             <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-              The Village runs on the same AI&sup3; platform powering businesses across the country
+              The Village runs on the same AI&#179; platform powering businesses across the country
               -- but applied to where you live.
             </p>
           </motion.div>
@@ -395,6 +387,33 @@ export default function Village() {
         </div>
       </section>
 
+      {/* ━━━ ROBOTICS-DRIVEN CONSTRUCTION ━━━ */}
+      <section className="relative py-28 px-6">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div {...fadeUp}>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5 mb-6">
+              <Bot size={14} className="text-accent" />
+              <span className="text-xs font-semibold uppercase tracking-[0.15em] text-accent">
+                Built Different
+              </span>
+            </div>
+
+            <h2 className="text-4xl sm:text-5xl font-black tracking-[-0.03em] leading-tight mb-6">
+              Robotics-driven construction.{' '}
+              <span className="gradient-text">Do more with less.</span>
+            </h2>
+
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-6 leading-relaxed">
+              The Village leverages innovative robotics-driven construction methods to build smarter, faster,
+              and more efficiently. Precision engineering meets AI-optimized design -- delivering luxury-quality
+              barndominiums at a fraction of traditional construction timelines and waste.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ━━━ FOR INVESTORS ━━━ */}
       <section className="relative py-28 px-6">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
@@ -415,8 +434,8 @@ export default function Village() {
 
             <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-6 leading-relaxed">
               Real estate meets AI meets robotics. The Village is the physical proof of what happens
-              when the AI&sup3; intelligence layer is applied to modern living -- 30 appreciating
-              assets in one of America's hottest markets.
+              when the AI&#179; intelligence layer is applied to modern living -- appreciating
+              assets built with next-generation technology.
             </p>
 
             <div className="grid sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-10">
@@ -456,12 +475,12 @@ export default function Village() {
         <div className="relative max-w-3xl mx-auto text-center">
           <motion.div {...fadeUp}>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent mb-4">
-              Limited Availability
+              Join the Waitlist
             </p>
             <h2 className="text-4xl sm:text-5xl font-black tracking-[-0.03em] leading-tight mb-4">
               Reserve your spot.
               <br />
-              <span className="gradient-text">Limited to 30 homes.</span>
+              <span className="gradient-text">The future of living starts here.</span>
             </h2>
             <p className="text-lg text-text-secondary mb-10">
               Request an invite to be the first to choose your lot, customize your home, and move
@@ -511,21 +530,6 @@ export default function Village() {
                 </button>
               </form>
             )}
-          </motion.div>
-
-          {/* Powered by badge */}
-          <motion.div
-            {...fadeUp}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-16"
-          >
-            <Link
-              to="/"
-              className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-white transition-colors no-underline"
-            >
-              <span className="text-lg font-black gradient-text">AI&sup3;</span>
-              <span>The Intelligence Company</span>
-            </Link>
           </motion.div>
         </div>
       </section>

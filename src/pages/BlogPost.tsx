@@ -142,6 +142,133 @@ That is what Move provides: the infrastructure to deploy, manage, and scale a na
 The question for every leader is no longer "should we use AI?" It is "how many agents do we need, and what should they be doing right now?"`,
   },
   {
+    slug: 'ai-in-education',
+    title: 'AI\u00B3 in the Classroom: Personalized Learning Without Losing the Teacher',
+    category: 'Education',
+    readTime: '5 min',
+    content: `Every student learns differently. This is not a controversial statement. It is one of the most well-documented facts in education research. Visual learners, auditory learners, kinesthetic learners. Students who need repetition. Students who need to be challenged beyond grade level. Students learning English as a second language. Students with dyslexia, ADHD, or processing differences. A single classroom can contain thirty entirely different learning profiles.
+
+And yet the system gives every one of them the same lesson, the same pace, and the same assessment.
+
+Teachers know this is a problem. They have always known. The issue was never awareness. It was physics. One human being cannot simultaneously deliver thirty personalized curricula. The math does not work. So teachers do the best they can with differentiated groups, modified assignments, and sheer willpower. It is heroic work. It is also unsustainable and incomplete.
+
+## What AI\u00B3 Changes
+
+AI\u00B3 does not replace the teacher. It removes the impossible constraint. Now, the intelligence layer, sits between the teacher's lesson plan and each student's experience. The teacher creates the lesson once. Now personalizes the delivery for every student in real-time.
+
+Consider a seventh-grade science class studying the water cycle. The teacher records the core lesson with the concepts, vocabulary, and learning objectives. Now takes that foundation and adapts it thirty different ways. An ESL student from Guatemala receives the lesson with simplified vocabulary, visual aids, and key terms presented in both English and Spanish. A gifted student who already understands evaporation gets an accelerated version that introduces atmospheric pressure dynamics and asks them to model weather patterns. A student with dyslexia receives the content in a format optimized for their reading tools, with shorter paragraphs, highlighted key terms, and audio reinforcement.
+
+Same lesson. Same teacher. Same classroom. Thirty different experiences, each calibrated to what that student actually needs.
+
+## The Execution Layer
+
+Personalization without execution is just a nice idea. This is where Move comes in. Move deploys agents that handle the operational load that buries teachers. Grading is automated against the teacher's rubric, with flagged edge cases routed back for human review. Parent communication runs autonomously, sending personalized progress updates in the parent's preferred language. Administrative tasks like attendance tracking, IEP documentation, and reporting flow through agents instead of consuming planning periods.
+
+The result is not a teacher replaced by technology. It is a teacher who finally has the bandwidth to do what they became a teacher to do: connect with students, mentor, inspire, and intervene where it matters most.
+
+## What the Data Shows
+
+Districts that embrace personalized learning see measurable gains across every demographic. Engagement increases because students are working at the right level of challenge. Behavioral issues decrease because fewer students are bored or overwhelmed. Achievement gaps narrow because students with different needs are no longer receiving identical instruction and being measured against a single standard.
+
+The ESL student who was falling behind because the vocabulary was too advanced is now keeping pace with grade-level content delivered in an accessible way. The gifted student who was disengaged because the material was too easy is now challenged and motivated. The student with ADHD who struggled with long lectures is now receiving content in the format and length that works for their attention patterns.
+
+## The Teacher Is the Foundation
+
+AI\u00B3 is built on a simple principle: the human intelligence comes first. In education, that means the teacher's expertise, pedagogy, and relationship with their students is the foundation that everything else amplifies. No model can replace the teacher who notices a student is having a hard day. No agent can substitute for the mentor who helps a teenager believe in themselves.
+
+But that teacher can be amplified. Their lesson can reach every student personally. Their time can be protected from administrative burden. Their expertise can scale to meet every learner where they are. That is what AI\u00B3 builds: not a replacement for teaching, but the infrastructure that makes great teaching possible at a scale that was previously unimaginable.
+
+The classroom of the future does not have fewer teachers. It has teachers who are finally free to teach.`,
+  },
+  {
+    slug: 'creators-need-agents',
+    title: 'Why Every Creator Needs an Agent Fleet (Not Another AI Tool)',
+    category: 'Creators',
+    readTime: '6 min',
+    content: `The average creator uses between eight and fifteen tools. A scheduling tool. A design tool. An analytics platform. An email service. A link-in-bio tool. A CRM for brand deals. A community platform. A video editor. A transcription service. A social listening dashboard. And the list keeps growing.
+
+Every year, another wave of AI-powered tools promises to make the creator's life easier. Another AI writing assistant. Another AI image generator. Another AI analytics dashboard. Each one solves one narrow problem. None of them solve the actual problem.
+
+The actual problem is not that creators lack tools. It is that they lack execution capacity. They know what needs to happen. They just cannot do it all themselves.
+
+## Tools vs. Operators
+
+There is a fundamental difference between an AI tool and an AI operator. A tool waits for you to use it. You open it, give it a prompt, review the output, tweak it, and paste it somewhere else. The tool adds value, but it also adds a step. Multiply that across fifteen tools and you have not saved time. You have just shifted the bottleneck from creating content to managing an AI tool stack.
+
+An operator does not wait. An operator wakes up with a task list and executes. Kai, your content agent, checks the content calendar at six in the morning. Sees that three posts are due across Instagram, LinkedIn, and Twitter. Drafts all three in your voice, using your style guide, referencing your recent themes. Queues them for posting at optimal times. You wake up, review them on your phone, approve with a tap. Done.
+
+That is not a tool. That is a team member.
+
+## The Named Agent Fleet
+
+Inside AI\u00B3 Move, creators get a fleet of named agents, each responsible for a function that currently eats hours of the creator's week.
+
+**Kai** handles content operations. Not just drafting but the entire pipeline: ideation based on trending topics and audience data, drafting in the creator's authentic voice, reformatting for each platform, scheduling, and performance tracking. One podcast episode becomes a newsletter, six social posts, three short-form video clips, a Twitter thread, and a LinkedIn article. Automatically.
+
+**Nova** handles relationship management. DMs answered within minutes. Collaboration inquiries qualified and routed. Brand deal opportunities surfaced with context on the brand, their budget range, and whether they align with the creator's values. Fan messages that deserve a personal response flagged for the creator's attention.
+
+**Rex** handles the business side. Brand deal contracts tracked. Invoice follow-ups automated. Revenue dashboards maintained. Tax-relevant transactions categorized. The creator does not need a business manager because Rex is the business manager.
+
+## The Voice Problem, Solved
+
+The number one fear every creator has about AI is losing their voice. And that fear is justified when the tool is generic. ChatGPT writes like ChatGPT. Every creator using it sounds the same.
+
+AI\u00B3 solves this by starting with Now, the intelligence layer that captures the creator's actual voice. Not a generic tone setting. The specific vocabulary, humor, cadence, recurring phrases, and conversational patterns that make that creator's audience loyal. The agents operate from this voice model. Every piece of content, every DM response, every brand pitch carries the creator's authentic voice because it was built from their real communication patterns.
+
+## From Creator to Media Company
+
+The creators who win in the next decade will not be the ones who work the hardest. They will be the ones who build the best systems. An agent fleet turns a solo creator into a media company. Content across every platform, every day. Audience engagement at scale. Revenue operations running in the background. Community building that never stops.
+
+The creator focuses on what only they can do: think original thoughts, have real experiences, and connect with their audience as a human being. Everything else runs autonomously, in their voice, at a pace no individual human could sustain.
+
+That is not another AI tool. That is a career transformation.`,
+  },
+  {
+    slug: 'sports-intelligence',
+    title: 'The Intelligence Advantage: How AI\u00B3 Changes the Game for Coaches',
+    category: 'Sports',
+    readTime: '6 min',
+    content: `The arms race in college athletics has always been about resources. More staff. Bigger budgets. Better facilities. The programs with the most money hired the most recruiters, built the biggest analytics departments, and outspent their competition into submission.
+
+That era is ending. Not because money stopped mattering, but because a new variable entered the equation: intelligence infrastructure.
+
+The programs that dominate the next decade will not necessarily have the biggest budgets. They will have the best intelligence systems. And the gap between programs with AI\u00B3 and programs without it will be wider than the gap between programs with five recruiters and programs with fifty.
+
+## Recruiting at Machine Speed
+
+Recruiting is a volume and personalization game. The more prospects you contact, the more responses you get. The more personalized those contacts are, the higher the response rate. These two variables are normally in tension. You can contact a lot of people with templates, or you can personalize a few messages. You cannot do both.
+
+AI\u00B3 eliminates that tradeoff. Move deploys recruiting agents that operate from the coaching staff's captured philosophy, voice, and evaluation criteria. Each outreach message references the prospect's specific film, stats, academic profile, and interests. The tone matches the head coach. The volume matches a program with unlimited recruiting staff.
+
+A mid-major program running AI\u00B3 can contact more prospects, with more personalization, than a Power Five program doing it manually. That is not an incremental advantage. That is a structural one.
+
+## Film Analysis Without the Bottleneck
+
+Every coaching staff has the same problem with film. There is too much of it, and not enough time to watch it all. Prospect film sits in queues for days. Game prep relies on the same few tendencies because nobody had time to dig deeper. Player development film sessions are generic because individualized breakdowns are too time-consuming.
+
+AI\u00B3 agents process film against the coaching staff's evaluation criteria and deliver structured breakdowns same-day. A pitching coach who values fastball command, changeup deception, and first-pitch strike percentage gets prospects evaluated against exactly those metrics. A hitting coach who prioritizes bat path and plate discipline sees those specific data points highlighted. The analysis matches the coaching philosophy because the system was trained on it.
+
+## Player Development, Personalized
+
+The best coaches know that development is individual. A sophomore working on his slider needs different communication, different drills, and different encouragement than a senior preparing for the draft. But in practice, most player development communication is broadcast. One message to the whole pitching staff. One workout plan for the entire roster.
+
+Now captures the coaching staff's development philosophy and personalizes communication for every rostered player. Each player receives training plans, film clips, and motivational messaging calibrated to their position, development stage, learning style, and recent performance. The coaching staff's philosophy reaches every player individually, without requiring the coaching staff to individually communicate with every player every day.
+
+## NIL Management
+
+Name, Image, and Likeness has transformed college athletics into a business that most coaching staffs were never trained to manage. Players need guidance on deals, compliance requires tracking, and the distraction factor is real.
+
+AI\u00B3 agents can manage NIL pipelines, vet incoming opportunities against compliance requirements, and ensure that players are making informed decisions without the coaching staff becoming de facto agents. The system handles the administrative overhead so coaches can focus on development and relationships.
+
+## The Intelligence Compound Effect
+
+Every recruiting message sent through AI\u00B3 teaches the system more about what resonates with different types of prospects. Every film analysis refines the evaluation model. Every player development interaction improves the personalization. The system compounds over time.
+
+A program that deploys AI\u00B3 today has a six-month head start on a program that deploys it next year. And in a sport where margins are razor-thin, a six-month intelligence advantage translates directly into recruiting wins, development gains, and competitive edges that multiply season over season.
+
+The programs that figure this out first will not just compete better. They will recruit better, develop better, and retain better. The intelligence advantage is the new arms race, and it has already started.`,
+  },
+  {
     slug: 'personalization-at-scale',
     title: 'The End of One-Size-Fits-All: Personalization at Scale',
     category: 'Now',

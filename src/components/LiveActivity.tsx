@@ -26,20 +26,16 @@ const cities = [
   'Salt Lake City',
 ]
 
-/* ─── Message templates ─── */
+/* ─── Message templates (invite + invest only) ─── */
 const templates: ((city: string) => string)[] = [
-  (city) => `Someone from ${city} just requested early access`,
-  () => `${Math.floor(Math.random() * 18) + 8} people viewing this page right now`,
-  (city) => `An investor from ${city} just expressed interest`,
-  (city) => `Someone from ${city} took the assessment`,
-  () => `${Math.floor(Math.random() * 5) + 2} new organizations joined the waitlist today`,
-  (city) => `Someone from ${city} just explored The Village`,
-  (city) => `A coach in ${city} just tried the Now demo`,
-  () => `${Math.floor(Math.random() * 12) + 10} investors have expressed interest this week`,
-  (city) => `A church leader from ${city} just signed up`,
-  (city) => `Someone from ${city} just watched the Move demo`,
-  () => `${Math.floor(Math.random() * 6) + 3} assessments completed in the last hour`,
-  (city) => `A business owner in ${city} just joined the waitlist`,
+  (city) => `Invite requested from ${city}`,
+  (city) => `New investor interest from ${city}`,
+  (city) => `Early access requested from ${city}`,
+  (city) => `Investor inquiry from ${city}`,
+  (city) => `New investor from ${city}`,
+  (city) => `Someone in ${city} requested an invite`,
+  (city) => `Investor interest from ${city}`,
+  (city) => `Early access request from ${city}`,
 ]
 
 function pickRandom<T>(arr: T[]): T {

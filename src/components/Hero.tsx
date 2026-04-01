@@ -63,7 +63,7 @@ export default function Hero() {
             className="group px-8 py-3.5 text-base font-semibold text-accent hover:text-accent-hover bg-transparent border border-accent/30 hover:border-accent/50 rounded-full transition-all no-underline flex items-center gap-2"
           >
             <Sparkles size={16} />
-            Define Your Intelligence Gap
+            Discover Your AI³ Advantage
           </Link>
         </motion.div>
 

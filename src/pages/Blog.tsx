@@ -36,6 +36,30 @@ const posts = [
     excerpt:
       'Every message, every sermon, every newsletter is one-size-fits-all. Now changes that by personalizing content for every individual in real-time.',
   },
+  {
+    slug: 'ai-in-education',
+    title: 'AI\u00B3 in the Classroom: Personalized Learning Without Losing the Teacher',
+    category: 'Education',
+    readTime: '5 min',
+    excerpt:
+      'Every student learns differently, but a teacher can\'t personalize for 30 students simultaneously. AI\u00B3 can. The teacher is amplified, not replaced.',
+  },
+  {
+    slug: 'creators-need-agents',
+    title: 'Why Every Creator Needs an Agent Fleet (Not Another AI Tool)',
+    category: 'Creators',
+    readTime: '6 min',
+    excerpt:
+      'Creators are drowning in tools but starving for execution. The difference between another AI writing tool and a fleet of named agents that run your entire operation.',
+  },
+  {
+    slug: 'sports-intelligence',
+    title: 'The Intelligence Advantage: How AI\u00B3 Changes the Game for Coaches',
+    category: 'Sports',
+    readTime: '6 min',
+    excerpt:
+      'The programs that win in the next decade will have the best intelligence systems, not just the best coaches. Recruiting, film analysis, and player development, automated.',
+  },
 ]
 
 export default function Blog() {

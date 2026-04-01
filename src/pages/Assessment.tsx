@@ -37,12 +37,13 @@ const questions: QuizQuestion[] = [
     id: 1,
     question: 'What best describes your role?',
     options: [
-      { label: 'I lead a faith community (church/ministry)', avatar: 'church' },
-      { label: 'I coach athletes or teams', avatar: 'sports' },
-      { label: 'I train minds (mental performance, consulting)', avatar: 'performance' },
-      { label: 'I create content and build audiences', avatar: 'influencer' },
-      { label: 'I run a business or agency', avatar: 'business' },
-      { label: 'I have too many ideas and not enough execution', avatar: 'creator' },
+      { label: 'I\'m an educator or work in a classroom', avatar: 'education' },
+      { label: 'I\'m a creator or influencer', avatar: 'influencer' },
+      { label: 'I own or run a business', avatar: 'business' },
+      { label: 'I coach athletes or a sports team', avatar: 'sports' },
+      { label: 'I lead a faith community or church', avatar: 'church' },
+      { label: 'I\'m a life coach, business coach, or consultant', avatar: 'coach' },
+      { label: 'Other', avatar: 'other' },
     ],
   },
   {
@@ -116,12 +117,24 @@ const intelligenceMeta: Record<Intelligence, { label: string; icon: typeof Brain
 }
 
 const avatarLabels: Record<string, string> = {
-  church: 'Church Leader',
-  sports: 'Sports Coach',
-  performance: 'Performance Coach',
+  education: 'Educator',
   influencer: 'Creator / Influencer',
   business: 'Business Owner',
-  creator: 'Visionary Builder',
+  sports: 'Sports Coach',
+  church: 'Church Leader',
+  coach: 'Coach / Consultant',
+  other: 'Visionary',
+}
+
+// Map assessment avatar slugs to avatar page slugs
+const avatarPageSlug: Record<string, string> = {
+  education: 'education',
+  influencer: 'influencer',
+  business: 'business',
+  sports: 'sports',
+  church: 'church',
+  coach: 'performance',
+  other: 'business',
 }
 
 /* ─── Scoring Logic ─────────────────────────────────────────── */
@@ -235,6 +248,7 @@ export default function Assessment() {
   const [email, setEmail] = useState('')
   const [emailSubmitted, setEmailSubmitted] = useState(false)
   const [emailLoading, setEmailLoading] = useState(false)
+  const [otherText, setOtherText] = useState('')
   const [direction, setDirection] = useState(1) // 1 = forward, -1 = back
 
   const question = questions[currentQ]
@@ -284,6 +298,7 @@ export default function Assessment() {
         timestamp: new Date().toISOString(),
         source: 'assessment',
         avatar: profile.avatarSlug,
+        avatarOther: otherText || undefined,
         product: profile.product,
         strongest: profile.strongest,
         weakest: profile.weakest,
@@ -358,28 +373,46 @@ export default function Assessment() {
                   <div className="space-y-3">
                     {question.options.map((option, i) => {
                       const isSelected = selectedAnswer === i
+                      const isOther = option.label === 'Other'
                       return (
-                        <motion.button
-                          key={i}
-                          initial={{ opacity: 0, y: 16 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.3, delay: 0.05 + i * 0.05 }}
-                          onClick={() => selectAnswer(i)}
-                          className={`w-full text-left px-6 py-5 rounded-2xl border transition-all cursor-pointer group ${
-                            isSelected
-                              ? 'bg-accent/10 border-accent text-white'
-                              : 'bg-bg-card border-border hover:border-border-bright hover:bg-bg-card-hover text-text-secondary hover:text-white'
-                          }`}
-                        >
-                          <div className="flex items-center justify-between">
-                            <span className="text-[15px] font-medium leading-snug pr-4">{option.label}</span>
-                            <div className={`shrink-0 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${
-                              isSelected ? 'border-accent bg-accent' : 'border-border-bright group-hover:border-text-muted'
-                            }`}>
-                              {isSelected && <Check size={12} className="text-white" />}
+                        <div key={i}>
+                          <motion.button
+                            initial={{ opacity: 0, y: 16 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.3, delay: 0.05 + i * 0.05 }}
+                            onClick={() => selectAnswer(i)}
+                            className={`w-full text-left px-6 py-5 rounded-2xl border transition-all cursor-pointer group ${
+                              isSelected
+                                ? 'bg-accent/10 border-accent text-white'
+                                : 'bg-bg-card border-border hover:border-border-bright hover:bg-bg-card-hover text-text-secondary hover:text-white'
+                            }`}
+                          >
+                            <div className="flex items-center justify-between">
+                              <span className="text-[15px] font-medium leading-snug pr-4">{option.label}</span>
+                              <div className={`shrink-0 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${
+                                isSelected ? 'border-accent bg-accent' : 'border-border-bright group-hover:border-text-muted'
+                              }`}>
+                                {isSelected && <Check size={12} className="text-white" />}
+                              </div>
                             </div>
-                          </div>
-                        </motion.button>
+                          </motion.button>
+                          {isOther && isSelected && (
+                            <motion.div
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: 'auto' }}
+                              className="mt-2 px-1"
+                            >
+                              <input
+                                type="text"
+                                value={otherText}
+                                onChange={(e) => setOtherText(e.target.value)}
+                                placeholder="Tell us about your role..."
+                                className="w-full px-5 py-3.5 rounded-xl bg-bg border border-border text-white placeholder-text-muted outline-none focus:border-accent transition-colors text-sm"
+                                autoFocus
+                              />
+                            </motion.div>
+                          )}
+                        </div>
                       )
                     })}
                   </div>
@@ -536,7 +569,7 @@ export default function Assessment() {
                     transition={{ delay: 1.5 }}
                   >
                     <Link
-                      to={`/for/${profile.avatarSlug}`}
+                      to={`/for/${avatarPageSlug[profile.avatarSlug] || profile.avatarSlug}`}
                       className="group flex items-center justify-between w-full px-8 py-5 rounded-2xl border border-border hover:border-accent/40 bg-bg-card hover:bg-bg-card-hover transition-all no-underline"
                     >
                       <div>
@@ -560,6 +593,7 @@ export default function Assessment() {
                         setCurrentQ(0)
                         setShowResult(false)
                         setEmail('')
+                        setOtherText('')
                         setEmailSubmitted(false)
                         setDirection(-1)
                       }}

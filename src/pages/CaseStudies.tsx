@@ -31,6 +31,24 @@ const studies = [
     excerpt:
       'A creator deploys AI\u00B3 agents for content creation, DM management, and brand deals — voice preserved, output multiplied.',
   },
+  {
+    slug: 'education-district',
+    title: 'How a School District Personalized Learning for 12,000 Students',
+    category: 'Education',
+    featuredStat: '12,000',
+    featuredLabel: 'Students',
+    excerpt:
+      'A school district deploys Now for curriculum personalization and Move for administrative automation. Every student gets personalized materials.',
+  },
+  {
+    slug: 'influencer-growth',
+    title: 'How an Influencer Scaled from 50K to 500K Followers Without Burning Out',
+    category: 'Creator',
+    featuredStat: '15x',
+    featuredLabel: 'Content Output',
+    excerpt:
+      'A creator uses Move agents for content scheduling, DM management, and brand deal negotiation while Now personalizes their newsletter for different audience segments.',
+  },
 ]
 
 export default function CaseStudies() {
