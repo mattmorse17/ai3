@@ -111,9 +111,9 @@ export default function Navbar() {
             Assessment
           </Link>
 
-          <a href="https://wefunder.com/ai.8" target="_blank" rel="noopener noreferrer" className="text-sm text-text-secondary hover:text-white transition-colors no-underline">
+          <Link to="/invest" className="text-sm text-text-secondary hover:text-white transition-colors no-underline">
             Invest
-          </a>
+          </Link>
 
           <button
             onClick={() => scrollTo('waitlist')}
@@ -163,7 +163,7 @@ export default function Navbar() {
 
               <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-border">
                 <Link to="/assessment" onClick={close} className="text-accent font-medium no-underline">Take the Assessment</Link>
-                <a href="https://wefunder.com/ai.8" target="_blank" rel="noopener noreferrer" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Invest on Wefunder</a>
+                <Link to="/invest" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Invest</Link>
                 <button onClick={() => scrollTo('waitlist')} className="mt-2 px-5 py-3 text-sm font-bold text-black bg-accent hover:bg-accent-hover rounded-full transition-all cursor-pointer border-none">
                   Request Invite
                 </button>

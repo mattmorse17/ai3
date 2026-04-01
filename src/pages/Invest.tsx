@@ -93,11 +93,16 @@ export default function Invest() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex items-center justify-center gap-8 text-center"
+            className="flex flex-wrap items-center justify-center gap-8 text-center"
           >
             <div>
               <div className="text-3xl font-black gradient-text">$100</div>
               <div className="text-sm text-text-muted">Minimum</div>
+            </div>
+            <div className="w-px h-12 bg-border" />
+            <div>
+              <div className="text-3xl font-black gradient-text">$12.5M</div>
+              <div className="text-sm text-text-muted">Valuation Cap</div>
             </div>
             <div className="w-px h-12 bg-border" />
             <div>
@@ -107,9 +112,78 @@ export default function Invest() {
             <div className="w-px h-12 bg-border" />
             <div>
               <div className="text-3xl font-black gradient-text">$5M</div>
-              <div className="text-sm text-text-muted">Target raise</div>
+              <div className="text-sm text-text-muted">Target Raise (Community + Private)</div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Two Rounds */}
+      <section className="py-24 px-6 border-t border-border">
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl sm:text-5xl font-black tracking-[-0.03em] mb-4">Two ways to invest</h2>
+            <p className="text-text-secondary text-lg max-w-xl mx-auto">
+              Whether you're writing your first check or leading a round, there's a path for you.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0 }}
+              className="bg-bg-card border border-border rounded-2xl p-8 hover:border-border-bright transition-all"
+            >
+              <div className="inline-block px-3 py-1 bg-accent/10 text-accent text-xs font-semibold rounded-full mb-4">Community Round</div>
+              <h3 className="text-2xl font-bold mb-3">Open to Everyone</h3>
+              <ul className="space-y-3 text-text-secondary leading-relaxed mb-6">
+                <li className="flex items-start gap-2"><ChevronRight size={14} className="text-accent mt-1 shrink-0" />Regulation Crowdfunding (Reg CF)</li>
+                <li className="flex items-start gap-2"><ChevronRight size={14} className="text-accent mt-1 shrink-0" />$100 minimum investment</li>
+                <li className="flex items-start gap-2"><ChevronRight size={14} className="text-accent mt-1 shrink-0" />Same opportunity previously reserved for VCs</li>
+                <li className="flex items-start gap-2"><ChevronRight size={14} className="text-accent mt-1 shrink-0" />Investor updates, community access, early product access</li>
+              </ul>
+              <a
+                href="https://wefunder.com/ai.8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-black bg-accent hover:bg-accent-hover rounded-full transition-all no-underline"
+              >
+                Invest on Wefunder
+                <TrendingUp size={16} />
+              </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.15 }}
+              className="bg-bg-card border border-accent/30 rounded-2xl p-8 hover:border-accent/50 transition-all"
+            >
+              <div className="inline-block px-3 py-1 bg-accent/10 text-accent text-xs font-semibold rounded-full mb-4">Private Round</div>
+              <h3 className="text-2xl font-bold mb-3">Accredited Investors</h3>
+              <ul className="space-y-3 text-text-secondary leading-relaxed mb-6">
+                <li className="flex items-start gap-2"><ChevronRight size={14} className="text-accent mt-1 shrink-0" />Preferred terms and priority access</li>
+                <li className="flex items-start gap-2"><ChevronRight size={14} className="text-accent mt-1 shrink-0" />Higher minimums, deeper involvement</li>
+                <li className="flex items-start gap-2"><ChevronRight size={14} className="text-accent mt-1 shrink-0" />Direct founder access and strategic input</li>
+                <li className="flex items-start gap-2"><ChevronRight size={14} className="text-accent mt-1 shrink-0" />Custom AI³ implementation for your business</li>
+              </ul>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-accent border border-accent hover:bg-accent/10 rounded-full transition-all no-underline"
+              >
+                Inquire About Private Round
+                <ChevronRight size={16} />
+              </Link>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -209,7 +283,7 @@ export default function Invest() {
                 }`}
               >
                 {tier.featured && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 bg-accent text-white text-xs font-semibold rounded-full">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 bg-accent text-black text-xs font-semibold rounded-full">
                     Most Popular
                   </div>
                 )}
@@ -241,17 +315,26 @@ export default function Invest() {
               Ready to own the future?
             </h2>
             <p className="text-text-secondary text-lg mb-10 max-w-xl mx-auto">
-              Our Wefunder campaign is live. Invest as little as $100 in the intelligence layer.
+              Our Wefunder campaign is live. Invest as little as $100 in the intelligence layer — or inquire about our private round for accredited investors.
             </p>
-            <a
-              href="https://wefunder.com/ai.8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-10 py-4 text-lg font-bold text-black bg-accent hover:bg-accent-hover rounded-full transition-all no-underline glow"
-            >
-              Invest on Wefunder
-              <TrendingUp size={20} />
-            </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="https://wefunder.com/ai.8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-10 py-4 text-lg font-bold text-black bg-accent hover:bg-accent-hover rounded-full transition-all no-underline glow"
+              >
+                Invest on Wefunder
+                <TrendingUp size={20} />
+              </a>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 px-10 py-4 text-lg font-bold text-accent border border-accent hover:bg-accent/10 rounded-full transition-all no-underline"
+              >
+                Inquire About Private Round
+                <ChevronRight size={20} />
+              </Link>
+            </div>
 
             <p className="mt-12 text-xs text-text-muted max-w-2xl mx-auto leading-relaxed">
               This page is for informational purposes only and does not constitute an offer to sell or a solicitation
