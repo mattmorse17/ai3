@@ -1,31 +1,16 @@
 import { motion } from 'framer-motion'
 
 const integrations = [
-  { name: 'Gmail', icon: '📧' },
-  { name: 'Google Drive', icon: '📁' },
-  { name: 'Slack', icon: '💬' },
-  { name: 'Zoom', icon: '📹' },
-  { name: 'Notion', icon: '📝' },
-  { name: 'ClickUp', icon: '✅' },
-  { name: 'HubSpot', icon: '🔶' },
-  { name: 'Stripe', icon: '💳' },
-  { name: 'Shopify', icon: '🛒' },
-  { name: 'WordPress', icon: '🌐' },
-  { name: 'Instagram', icon: '📸' },
-  { name: 'YouTube', icon: '▶️' },
-  { name: 'Calendly', icon: '📅' },
-  { name: 'Twilio', icon: '📞' },
-  { name: 'Mailchimp', icon: '✉️' },
-  { name: 'Airtable', icon: '📊' },
-  { name: 'Zapier', icon: '⚡' },
-  { name: 'Make', icon: '🔗' },
-  { name: 'Telegram', icon: '💭' },
-  { name: 'Vimeo', icon: '🎬' },
+  'Google Drive', 'Gmail', 'Slack', 'Zoom', 'Notion', 'HubSpot',
+  'Salesforce', 'Stripe', 'Shopify', 'WordPress', 'Mailchimp', 'Calendly',
+  'Zapier', 'Airtable', 'Asana', 'Monday.com', 'ClickUp', 'Discord',
+  'YouTube', 'Instagram', 'TikTok', 'LinkedIn', 'X / Twitter', 'Spotify',
+  'Podcast Platforms', 'Wix', 'Squarespace', 'QuickBooks', 'Dropbox', 'Canva',
 ]
 
 export default function Integrations() {
   return (
-    <section className="relative py-20 px-6 overflow-hidden">
+    <section className="relative py-20 px-6 border-y border-border overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,42 +19,29 @@ export default function Integrations() {
           className="text-center mb-10"
         >
           <h3 className="text-2xl sm:text-3xl font-black tracking-tight mb-3">
-            Fits right into what you already use.
+            Plugs right into what you already use.
           </h3>
-          <p className="text-text-secondary text-base max-w-xl mx-auto">
-            AI³ doesn't add another tool to your stack — it connects to everything you're already running.
-            Less software. More done.
+          <p className="text-text-secondary max-w-xl mx-auto">
+            AI&sup3; does not replace your tools. It makes them smarter. One platform that connects
+            to everything, so you subtract complexity instead of adding it.
           </p>
         </motion.div>
       </div>
 
-      {/* Scrolling logos - two rows, opposite directions */}
-      <div className="space-y-4">
-        <div className="overflow-hidden">
-          <div className="animate-scroll-left flex gap-4">
-            {[...integrations, ...integrations].map((item, i) => (
-              <div
-                key={`${item.name}-${i}`}
-                className="flex items-center gap-2.5 px-5 py-3 bg-bg-card border border-border rounded-full whitespace-nowrap shrink-0 hover:border-accent/30 transition-colors"
-              >
-                <span className="text-lg">{item.icon}</span>
-                <span className="text-sm text-text-secondary font-medium">{item.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="overflow-hidden">
-          <div className="animate-scroll-left flex gap-4" style={{ animationDirection: 'reverse', animationDuration: '20s' }}>
-            {[...integrations.slice(10), ...integrations.slice(0, 10), ...integrations.slice(10), ...integrations.slice(0, 10)].map((item, i) => (
-              <div
-                key={`${item.name}-r-${i}`}
-                className="flex items-center gap-2.5 px-5 py-3 bg-bg-card border border-border rounded-full whitespace-nowrap shrink-0 hover:border-accent/30 transition-colors"
-              >
-                <span className="text-lg">{item.icon}</span>
-                <span className="text-sm text-text-secondary font-medium">{item.name}</span>
-              </div>
-            ))}
-          </div>
+      <div className="relative">
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-bg to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-bg to-transparent z-10 pointer-events-none" />
+
+        <div className="animate-scroll-left flex gap-4 w-max">
+          {[...integrations, ...integrations].map((name, i) => (
+            <div
+              key={i}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-bg-card border border-border text-text-muted text-sm whitespace-nowrap hover:border-accent/30 hover:text-accent transition-all"
+            >
+              <span className="w-2 h-2 rounded-full bg-accent/40" />
+              {name}
+            </div>
+          ))}
         </div>
       </div>
     </section>
