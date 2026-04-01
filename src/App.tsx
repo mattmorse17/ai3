@@ -9,6 +9,7 @@ import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
 import CaseStudies from './pages/CaseStudies'
 import CaseStudyDetail from './pages/CaseStudyDetail'
+import Kaifect from './pages/Kaifect'
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
+        <Route path="/kaifect" element={<Kaifect />} />
       </Routes>
     </BrowserRouter>
   )
