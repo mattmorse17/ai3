@@ -82,7 +82,7 @@ export default function Navbar() {
           </button>
 
           <Dropdown label="Products" onClose={close} items={[
-            { to: '/now', label: 'Now — Personalized Experience For Every Individual' },
+            { to: '/now', label: 'Now — Personalized Intelligence' },
             { to: '/move', label: 'Move — Your Own Fleet of AI Agents' },
           ]} />
 
@@ -141,7 +141,7 @@ export default function Navbar() {
           >
             <div className="px-6 py-6 flex flex-col gap-3 max-h-[70vh] overflow-y-auto">
               <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mt-2">Products</p>
-              <Link to="/now" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Now <span className="text-text-muted text-xs">— Personalized Experience</span></Link>
+              <Link to="/now" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Now <span className="text-text-muted text-xs">— Personalized Intelligence</span></Link>
               <Link to="/move" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Move <span className="text-text-muted text-xs">— Your AI Agent Fleet</span></Link>
 
               <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mt-4">Who It's For</p>
