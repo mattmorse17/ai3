@@ -67,13 +67,15 @@ export default function InvestorCTA() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center"
         >
-          <Link
-            to="/invest"
-            className="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-black font-bold bg-gradient-to-r from-gradient-start to-gradient-end hover:opacity-90 rounded-full transition-all no-underline glow"
+          <a
+            href="https://wefunder.com/ai.8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 text-base font-bold text-black bg-accent hover:bg-accent-hover rounded-full transition-all no-underline glow"
           >
-            Learn More & Invest
+            Invest on Wefunder
             <TrendingUp size={18} />
-          </Link>
+          </a>
           <p className="text-text-muted text-xs mt-4 max-w-md mx-auto">
             Investing involves risk. This is not a solicitation or offer to sell securities.
           </p>

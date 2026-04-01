@@ -1,4 +1,5 @@
 import InvestTicker from '../components/InvestTicker'
+import LiveActivity from '../components/LiveActivity'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Numbers from '../components/Numbers'
@@ -28,6 +29,7 @@ export default function Home() {
       <InvestorCTA />
       <Waitlist />
       <Footer />
+      <LiveActivity />
     </div>
   )
 }

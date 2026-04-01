@@ -30,9 +30,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-[-0.04em] leading-[0.95] mb-6"
         >
-          The Intelligence
+          Intelligence
           <br />
-          <span className="gradient-text">Company.</span>
+          <span className="gradient-text">in Action.</span>
         </motion.h1>
 
         <motion.p

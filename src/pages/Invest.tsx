@@ -241,14 +241,15 @@ export default function Invest() {
               Ready to own the future?
             </h2>
             <p className="text-text-secondary text-lg mb-10 max-w-xl mx-auto">
-              Investment will be facilitated through our Wefunder campaign.
-              Get notified when it goes live.
+              Our Wefunder campaign is live. Invest as little as $500 in the intelligence layer.
             </p>
             <a
-              href="mailto:invest@makeyourmove.ai?subject=AI³ Investment Interest"
-              className="inline-flex items-center gap-2 px-10 py-4 text-lg font-semibold text-black font-bold bg-gradient-to-r from-gradient-start to-gradient-end hover:opacity-90 rounded-full transition-all no-underline glow"
+              href="https://wefunder.com/ai.8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-10 py-4 text-lg font-bold text-black bg-accent hover:bg-accent-hover rounded-full transition-all no-underline glow"
             >
-              Express Interest
+              Invest on Wefunder
               <TrendingUp size={20} />
             </a>
 
