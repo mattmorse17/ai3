@@ -7,6 +7,7 @@ import HowItWorks from '../components/HowItWorks'
 import Integrations from '../components/Integrations'
 import Avatars from '../components/Avatars'
 import Products from '../components/Products'
+import Ventures from '../components/Ventures'
 import InvestorCTA from '../components/InvestorCTA'
 import Waitlist from '../components/Waitlist'
 import Footer from '../components/Footer'
@@ -23,6 +24,7 @@ export default function Home() {
       <HowItWorks />
       <Avatars />
       <Products />
+      <Ventures />
       <InvestorCTA />
       <Waitlist />
       <Footer />
