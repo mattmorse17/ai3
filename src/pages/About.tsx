@@ -10,7 +10,7 @@ const agents = [
     name: 'Kai',
     role: 'Chief Intelligence Officer',
     description:
-      'Orchestrates the entire AI\u00B3 ecosystem. Routes tasks, makes decisions, and ensures every agent operates at peak performance.',
+      'Orchestrates the entire AI³ ecosystem. Routes tasks, makes decisions, and ensures every agent operates at peak performance.',
     gradient: 'from-blue-500 to-cyan-400',
     icon: Brain,
   },

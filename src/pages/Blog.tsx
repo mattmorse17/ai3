@@ -38,11 +38,11 @@ const posts = [
   },
   {
     slug: 'ai-in-education',
-    title: 'AI\u00B3 in the Classroom: Personalized Learning Without Losing the Teacher',
+    title: 'AI³ in the Classroom: Personalized Learning Without Losing the Teacher',
     category: 'Education',
     readTime: '5 min',
     excerpt:
-      'Every student learns differently, but a teacher can\'t personalize for 30 students simultaneously. AI\u00B3 can. The teacher is amplified, not replaced.',
+      'Every student learns differently, but a teacher can\'t personalize for 30 students simultaneously. AI³ can. The teacher is amplified, not replaced.',
   },
   {
     slug: 'creators-need-agents',
@@ -54,7 +54,7 @@ const posts = [
   },
   {
     slug: 'sports-intelligence',
-    title: 'The Intelligence Advantage: How AI\u00B3 Changes the Game for Coaches',
+    title: 'The Intelligence Advantage: How AI³ Changes the Game for Coaches',
     category: 'Sports',
     readTime: '6 min',
     excerpt:

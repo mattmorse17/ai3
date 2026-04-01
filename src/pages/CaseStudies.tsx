@@ -29,7 +29,7 @@ const studies = [
     featuredStat: '10x',
     featuredLabel: 'Content Output',
     excerpt:
-      'A creator deploys AI\u00B3 agents for content creation, DM management, and brand deals — voice preserved, output multiplied.',
+      'A creator deploys AI³ agents for content creation, DM management, and brand deals — voice preserved, output multiplied.',
   },
   {
     slug: 'education-district',
@@ -63,7 +63,7 @@ export default function CaseStudies() {
           </h1>
           <div className="flex items-center gap-3 mb-16">
             <p className="text-text-secondary text-lg max-w-2xl">
-              Projected results based on AI\u00B3 architecture applied to real industry scenarios.
+              Projected results based on AI³ architecture applied to real industry scenarios.
             </p>
             <span className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full whitespace-nowrap">
               <FlaskConical size={12} />

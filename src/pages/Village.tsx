@@ -84,7 +84,7 @@ const features = [
     bullets: [
       'Gated community access',
       'Perimeter detection & smart cameras',
-      'Smart lock integration with AI\u00B3 platform',
+      'Smart lock integration with AI³ platform',
       'Real-time alerts & visitor management',
     ],
   },
@@ -104,7 +104,7 @@ const stats = [
   { value: 'Custom', label: 'Designs' },
   { value: 'Smart', label: 'Everything' },
   { value: 'Robot', label: 'Built' },
-  { value: 'AI\u00B3', label: 'Powered' },
+  { value: 'AI³', label: 'Powered' },
 ]
 
 const intelligences = [

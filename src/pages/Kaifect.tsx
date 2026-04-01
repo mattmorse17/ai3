@@ -106,7 +106,7 @@ const agents = [
 ]
 
 const services = [
-  { icon: Target, title: 'Kaifecta Platform', description: 'Website, funnel, and landing page building -- custom-built digital presence powered by AI\u00B3.' },
+  { icon: Target, title: 'Kaifecta Platform', description: 'Website, funnel, and landing page building -- custom-built digital presence powered by AI³.' },
   { icon: Users, title: 'Agency DFY Services', description: 'Done-for-you marketing, branding, and business operations. Strategy to execution, handled.' },
   { icon: Megaphone, title: 'C4 Cycles', description: 'Content and campaign cycles that keep your brand visible, relevant, and converting -- month after month.' },
   { icon: PackageCheck, title: 'KaiPublish', description: 'Print-on-demand product creation and publishing. From concept to shelf, automated.' },

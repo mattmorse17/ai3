@@ -53,13 +53,13 @@ const stages = [
     step: '02',
     title: 'Acquire',
     icon: ShoppingCart,
-    description: 'Purchase businesses with strong fundamentals but operational inefficiency. The sweet spot where AI\u00B3 creates the most value.',
+    description: 'Purchase businesses with strong fundamentals but operational inefficiency. The sweet spot where AI³ creates the most value.',
   },
   {
     step: '03',
     title: 'Automate',
     icon: Cpu,
-    description: 'Deploy AI\u00B3 agents across the entire operation. Implement HyperOptimization on marketing, sales, fulfillment, and support.',
+    description: 'Deploy AI³ agents across the entire operation. Implement HyperOptimization on marketing, sales, fulfillment, and support.',
   },
   {
     step: '04',
@@ -102,7 +102,7 @@ const stats = [
   { value: '10+', label: 'Years Experience' },
   { value: '100+', label: 'Businesses Built & Scaled' },
   { value: '3-10x', label: 'Typical Growth' },
-  { value: 'AI\u00B3', label: 'Powered' },
+  { value: 'AI³', label: 'Powered' },
 ]
 
 /* ---------- forms ---------- */
@@ -492,7 +492,7 @@ export default function Vyro() {
                 Not ready to sell? We'll implement HyperOptimization across your operation. You keep full ownership. AI&#179; agents run the day-to-day while you focus on strategy.
               </p>
               <ul className="space-y-2">
-                {['Full ownership retained', 'AI\u00B3 agents deployed to your business', '3-10x growth without proportional headcount'].map(item => (
+                {['Full ownership retained', 'AI³ agents deployed to your business', '3-10x growth without proportional headcount'].map(item => (
                   <li key={item} className="flex items-center gap-2 text-text-secondary text-sm">
                     <Check size={14} className="text-blue-400 shrink-0" />
                     {item}
@@ -523,7 +523,7 @@ export default function Vyro() {
             <div className="grid sm:grid-cols-3 gap-4 mb-10">
               {[
                 { icon: Building2, title: 'Source & Acquire', desc: 'We find undervalued businesses with strong fundamentals.' },
-                { icon: Bot, title: 'Deploy AI\u00B3', desc: 'Full-stack optimization. Marketing, sales, ops, intelligence.' },
+                { icon: Bot, title: 'Deploy AI³', desc: 'Full-stack optimization. Marketing, sales, ops, intelligence.' },
                 { icon: TrendingUp, title: 'Exit at Premium', desc: 'Sell at 5-10x or hold for cash flow. The math works.' },
               ].map((item, i) => {
                 const Icon = item.icon

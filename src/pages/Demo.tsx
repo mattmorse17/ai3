@@ -955,7 +955,7 @@ function BottomCTA() {
                 className="w-4 h-4 rounded border-border accent-accent cursor-pointer"
               />
               <span className="text-sm text-text-secondary">
-                I'm also interested in investing in AI\u00b3
+                I'm also interested in investing in AI³
               </span>
             </label>
             <button
