@@ -90,7 +90,7 @@ This means capturing expertise deliberately: recording how leaders actually comm
 
 The organizations that win will not be the ones with the most advanced models. They will be the ones that figured out how to keep humans at the center while letting AI do what AI does best: scale the human signal without degrading it.
 
-That is the entire thesis behind AI\u00B3. Not artificial intelligence alone. Actual intelligence, amplified artificially, executed agentically. The human never leaves the loop. The loop just gets a lot bigger.`,
+That is the entire thesis behind AI\u00B3. Not Artificial Intelligence alone. Actual Intelligence, amplified artificially, executed agentically. The human never leaves the loop. The loop just gets a lot bigger.`,
   },
   {
     slug: 'agents-not-chatbots',

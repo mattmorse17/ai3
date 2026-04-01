@@ -131,7 +131,7 @@ export default function About() {
                 <h3 className="text-2xl font-black mb-1">Matt Morse</h3>
                 <p className="text-accent font-semibold mb-4">Founder & CEO</p>
                 <p className="text-text-secondary leading-relaxed mb-6">
-                  10 years building AI-powered businesses. Started as a marketing agency (Kaifect),
+                  10 years building AI-powered businesses. Started with Kaifect as an AI&#179; Powered Growth Partner,
                   evolved into the AI&#179; methodology. Based in Franklin, TN.
                 </p>
                 <p className="text-white/80 italic border-l-2 border-accent pl-4 mb-8">
@@ -254,7 +254,7 @@ export default function About() {
             </h2>
             <p className="text-text-secondary text-lg mb-10 max-w-xl mx-auto">
               Whether you want to invest in the intelligence layer or be first in line when it
-              launches — there's a seat for you.
+              launches. There's a seat for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

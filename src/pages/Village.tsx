@@ -188,7 +188,6 @@ export default function Village() {
             className="text-6xl sm:text-7xl lg:text-[6.5rem] font-black tracking-[-0.05em] leading-[0.9] mb-6"
           >
             The Village
-            <span className="text-accent align-super text-[0.4em]">&trade;</span>
           </motion.h1>
 
           <motion.p
@@ -465,7 +464,7 @@ export default function Village() {
               <span className="gradient-text">Limited to 30 homes.</span>
             </h2>
             <p className="text-lg text-text-secondary mb-10">
-              Join the waitlist to be the first to choose your lot, customize your home, and move
+              Request an invite to be the first to choose your lot, customize your home, and move
               into the future.
             </p>
           </motion.div>

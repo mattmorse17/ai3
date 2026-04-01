@@ -2,10 +2,10 @@ export default function InvestTicker() {
   const items = [
     '\ud83d\udfe2 Now Raising \u2014 Community Round + Private Round Open',
     'Invest starting at $100',
-    'Request Early Access to Now + Move',
+    'Request an Invite for Now + Move',
     '\ud83d\udfe2 Now Raising \u2014 Community Round + Private Round Open',
     'Invest starting at $100',
-    'Request Early Access to Now + Move',
+    'Request an Invite for Now + Move',
   ]
 
   return (

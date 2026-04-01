@@ -81,7 +81,7 @@ const services = [
   { icon: Megaphone, title: 'Lead Generation & Sales Automation', description: 'Prospects found, qualified, and nurtured by AI agents that never clock out.' },
   { icon: Users, title: 'Client Experience & Retention', description: 'Every client touchpoint managed, measured, and optimized for lifetime value.' },
   { icon: Zap, title: 'Full-Stack Business Operations', description: 'CRM, project management, scheduling, invoicing -- all running on AI\u00B3 infrastructure.' },
-  { icon: Clock, title: 'Running 24/7/365', description: 'No holidays. No sick days. No missed deadlines. Your agency never sleeps.' },
+  { icon: Clock, title: 'Running 24/7/365', description: 'No holidays. No sick days. No missed deadlines. Your growth partner never sleeps.' },
 ]
 
 /* ---------- fade helpers ---------- */
@@ -181,7 +181,7 @@ export default function Kaifect() {
 
             {/* Tagline */}
             <p className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-[-0.02em] text-white mb-6 max-w-3xl mx-auto leading-tight">
-              An army of AI agents.<br />On a mission to build your business.
+              An army of AI agents.<br />On a mission to grow your organization.
             </p>
 
             {/* Subtitle */}
@@ -190,7 +190,7 @@ export default function Kaifect() {
               <Link to="/" className="text-accent hover:underline font-semibold no-underline">
                 AI&#179;
               </Link>
-              {' '}&mdash; the intelligence layer that fuses actual, artificial, and agentic intelligence.
+              {' '}&mdash; the intelligence layer that fuses Actual, Artificial, and Agentic Intelligence.
             </p>
           </motion.div>
 
@@ -200,7 +200,7 @@ export default function Kaifect() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <EmailCapture id="hero" label="Request Early Access" />
+            <EmailCapture id="hero" label="Request an Invite" />
           </motion.div>
 
           <motion.div
@@ -227,7 +227,7 @@ export default function Kaifect() {
           <motion.div {...fadeUp} className="text-center mb-16">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent mb-4">What is Kaifect?</p>
             <h2 className="text-4xl sm:text-5xl font-black tracking-[-0.03em] leading-tight mb-4">
-              Not your parents' marketing agency.
+              Not your parents' growth partner.
             </h2>
           </motion.div>
 
@@ -312,7 +312,7 @@ export default function Kaifect() {
           <motion.div {...fadeUp} className="text-center mb-16">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent mb-4">What We Do</p>
             <h2 className="text-4xl sm:text-5xl font-black tracking-[-0.03em] leading-tight mb-4">
-              Everything an agency does.<br />Nothing an agency can't scale.
+              Everything a growth partner does.<br />Nothing a growth partner can't scale.
             </h2>
             <p className="text-lg text-text-secondary max-w-2xl mx-auto">
               All powered by AI&#179;. All running 24/7.
@@ -402,7 +402,7 @@ export default function Kaifect() {
           </motion.div>
 
           <motion.div {...stagger} transition={{ duration: 0.6, delay: 0.2 }}>
-            <EmailCapture id="footer-cta" label="Request Early Access" />
+            <EmailCapture id="footer-cta" label="Request an Invite" />
           </motion.div>
 
           <motion.div {...stagger} transition={{ duration: 0.6, delay: 0.35 }} className="mt-10 flex flex-col items-center gap-4">

@@ -179,7 +179,7 @@ const avatarData: Record<string, AvatarData> = {
     },
     result: 'The next generation of businesses won\'t have bigger teams. They\'ll have smarter systems. AI³ is the operating layer that lets a 5-person company operate like a 50-person one.',
     caseStudyName: 'Kaifect',
-    caseStudyQuote: 'A marketing agency running 50+ clients with AI³ as its operating system — proving the model works before we ever sold it as a product.',
+    caseStudyQuote: 'An AI³ Powered Growth Partner running 50+ clients with AI³ as its operating system. Proving the model works before we ever sold it as a product.',
   },
   creator: {
     title: 'Chaotic Creators',
@@ -393,7 +393,7 @@ export default function AvatarPage() {
               href="mailto:hello@makeyourmove.ai?subject=AI³ Interest — {data.title}"
               className="inline-flex items-center gap-2 px-10 py-4 text-lg font-semibold text-black font-bold bg-gradient-to-r from-gradient-start to-gradient-end hover:opacity-90 rounded-full transition-all no-underline glow"
             >
-              Get Early Access
+              Request an Invite
               <ArrowRight size={20} />
             </a>
           </motion.div>

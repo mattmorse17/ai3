@@ -541,7 +541,7 @@ export default function Assessment() {
                     >
                       <div>
                         <p className="text-xs font-semibold uppercase tracking-wider text-accent mb-1">Built for you</p>
-                        <p className="text-base font-bold text-white">See AI3 for {profile.avatarLabel}s</p>
+                        <p className="text-base font-bold text-white">See AI&#179; for {profile.avatarLabel}s</p>
                       </div>
                       <ChevronRight size={20} className="text-text-muted group-hover:text-accent group-hover:translate-x-1 transition-all" />
                     </Link>

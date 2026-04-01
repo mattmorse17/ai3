@@ -54,7 +54,7 @@ export default function Hero() {
             onClick={() => scrollTo('waitlist')}
             className="group px-8 py-3.5 text-base font-bold text-black bg-accent hover:bg-accent-hover rounded-full transition-all cursor-pointer border-none flex items-center gap-2 glow"
           >
-            Request Early Access
+            Request an Invite
             <ArrowRight size={18} className="group-hover:translate-x-0.5 transition-transform" />
           </button>
           <Link

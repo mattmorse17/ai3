@@ -731,7 +731,7 @@ export default function Demo() {
                               to="/#waitlist"
                               className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-black bg-accent hover:bg-accent-hover rounded-full transition-all no-underline"
                             >
-                              Get Early Access
+                              Request an Invite
                               <ArrowRight size={16} />
                             </Link>
                             <button

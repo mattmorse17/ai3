@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 
 const tiers = [
   {
-    amount: '$500',
+    amount: '$100',
     title: 'Believer',
     perks: ['Investor updates', 'Community access', 'Early product access'],
   },
@@ -37,7 +37,7 @@ const whyNow = [
   {
     icon: Users,
     title: 'Traction',
-    text: '50+ organizations already powered by AI³. 10 years of real-world deployment. This isn\'t a pitch deck — it\'s a proven system.',
+    text: '50+ organizations already powered by AI³. 10 years of real-world deployment. This isn\'t a pitch deck. It\'s a proven system.',
   },
   {
     icon: Zap,
@@ -85,7 +85,7 @@ export default function Invest() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-xl text-text-secondary max-w-2xl mx-auto mb-10"
           >
-            AI³ is raising under Regulation Crowdfunding. For the first time, anyone — not just VCs — can
+            AI³ is raising under Regulation Crowdfunding. For the first time, anyone, not just VCs, can
             own a stake in the intelligence layer powering the next generation of business.
           </motion.p>
 
@@ -96,7 +96,7 @@ export default function Invest() {
             className="flex items-center justify-center gap-8 text-center"
           >
             <div>
-              <div className="text-3xl font-black gradient-text">$500</div>
+              <div className="text-3xl font-black gradient-text">$100</div>
               <div className="text-sm text-text-muted">Minimum</div>
             </div>
             <div className="w-px h-12 bg-border" />
@@ -160,9 +160,9 @@ export default function Invest() {
 
           <div className="grid sm:grid-cols-3 gap-4">
             {[
-              { step: '01', title: 'Deploy AI³ for Real Businesses', desc: 'Churches, coaches, creators, and operators — proving the system works in the real world' },
-              { step: '02', title: 'Now + Move Products', desc: 'Scalable SaaS platforms anyone can use — built from thousands of hours of real deployment' },
-              { step: '03', title: 'Intelligence Layer Compounds', desc: 'Every new user trains the system — more deployments = smarter platform = stronger moat' },
+              { step: '01', title: 'Deploy AI³ for Real Businesses', desc: 'Churches, coaches, creators, and operators. Proving the system works in the real world.' },
+              { step: '02', title: 'Now + Move Products', desc: 'Scalable SaaS platforms anyone can use, built from thousands of hours of real deployment.' },
+              { step: '03', title: 'Intelligence Layer Compounds', desc: 'Every new user trains the system. More deployments = smarter platform = stronger moat.' },
             ].map((item, i) => (
               <motion.div
                 key={item.step}
@@ -241,7 +241,7 @@ export default function Invest() {
               Ready to own the future?
             </h2>
             <p className="text-text-secondary text-lg mb-10 max-w-xl mx-auto">
-              Our Wefunder campaign is live. Invest as little as $500 in the intelligence layer.
+              Our Wefunder campaign is live. Invest as little as $100 in the intelligence layer.
             </p>
             <a
               href="https://wefunder.com/ai.8"
