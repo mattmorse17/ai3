@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { motion } from 'framer-motion'
+import { submitLead } from '../lib/notify'
 import { Link } from 'react-router-dom'
 import {
   Home,
@@ -148,7 +149,7 @@ export default function Village() {
     } catch {
       // silent
     }
-    await new Promise((r) => setTimeout(r, 600))
+    await submitLead({ source: 'village', email })
     setSubmitted(true)
     setLoading(false)
   }

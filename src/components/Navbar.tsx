@@ -90,6 +90,7 @@ export default function Navbar() {
             { to: '/for/education', label: 'Education' },
             { to: '/for/creator', label: 'Creators & Influencers' },
             { to: '/for/business', label: 'Business Owners' },
+            { to: '/for/events', label: 'Speakers & Event Planners' },
             { to: '/for/sports', label: 'Sports Coaches' },
             { to: '/for/church', label: 'Churches & Ministries' },
             { to: '/for/performance', label: 'Life & Business Coaches' },
@@ -147,6 +148,7 @@ export default function Navbar() {
               <Link to="/for/education" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Education</Link>
               <Link to="/for/creator" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Creators & Influencers</Link>
               <Link to="/for/business" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Business Owners</Link>
+              <Link to="/for/events" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Speakers & Event Planners</Link>
               <Link to="/for/sports" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Sports Coaches</Link>
               <Link to="/for/church" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Churches & Ministries</Link>
               <Link to="/for/performance" onClick={close} className="text-text-secondary hover:text-white transition-colors no-underline">Life & Business Coaches</Link>

@@ -3,7 +3,7 @@ import { Activity, Bot, CheckCircle2, Circle, Clock, Globe, Mail, MessageSquare,
 /* ─── shared browser chrome wrapper ─── */
 function BrowserFrame({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
-    <div className={`rounded-xl overflow-hidden border border-zinc-800 shadow-2xl shadow-black/60 ${className}`}>
+    <div className={`rounded-xl overflow-hidden overflow-x-auto border border-zinc-800 shadow-2xl shadow-black/60 ${className}`}>
       {/* toolbar */}
       <div className="flex items-center gap-2 px-4 py-2.5 bg-zinc-900/80 border-b border-zinc-800">
         <span className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
@@ -16,7 +16,7 @@ function BrowserFrame({ children, className = '' }: { children: React.ReactNode;
         </div>
       </div>
       {/* content */}
-      <div className="bg-zinc-950">{children}</div>
+      <div className="bg-zinc-950 overflow-x-auto">{children}</div>
     </div>
   )
 }

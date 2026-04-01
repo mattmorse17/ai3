@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { motion } from 'framer-motion'
+import { submitLead } from '../lib/notify'
 import {
   ArrowRight,
   Check,
@@ -121,7 +122,7 @@ function BusinessSubmitForm() {
       leads.push({ ...form, type: 'business_submit', timestamp: new Date().toISOString() })
       localStorage.setItem('vyro_leads', JSON.stringify(leads))
     } catch { /* silent */ }
-    await new Promise(r => setTimeout(r, 600))
+    await submitLead({ source: 'vyro-business', email: form.email, name: form.name, interest: form.industry })
     setSubmitted(true)
     setLoading(false)
   }
@@ -218,7 +219,7 @@ function InvestorForm() {
       leads.push({ email, type: 'investor_interest', timestamp: new Date().toISOString() })
       localStorage.setItem('vyro_leads', JSON.stringify(leads))
     } catch { /* silent */ }
-    await new Promise(r => setTimeout(r, 600))
+    await submitLead({ source: 'vyro-investor', email, investInterest: true })
     setSubmitted(true)
     setLoading(false)
   }

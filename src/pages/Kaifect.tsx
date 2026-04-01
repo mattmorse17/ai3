@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { motion } from 'framer-motion'
+import { submitLead } from '../lib/notify'
 import {
   ArrowRight,
   Check,
@@ -153,7 +154,7 @@ function ApplicationForm() {
     } catch {
       // silent
     }
-    await new Promise(r => setTimeout(r, 600))
+    await submitLead({ source: 'kaifect-apply', email: form.email, name: form.name, interest: form.creatorType })
     setSubmitted(true)
     setLoading(false)
   }

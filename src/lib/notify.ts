@@ -1,28 +1,45 @@
-const WEB3FORMS_KEY = '0a2b8a20-5c5a-4e37-9e2b-8b7f8a0d1c3e'
+const KAIFECTA_API_KEY = 'w3e991ee451fb4cfda364772af5783d1f'
+const KAIFECTA_URL = 'https://matt-morse.kaifecta.com/me/crm'
 
-export async function notifySubmission(data: {
+export async function submitLead(data: {
   source: string
   email: string
+  name?: string
+  interest?: string
+  investInterest?: boolean
   [key: string]: string | boolean | undefined
 }) {
+  // Always store locally as backup
   try {
-    const key = 'ai3_leads'
-    const existing = JSON.parse(localStorage.getItem(key) || '[]')
+    const existing = JSON.parse(localStorage.getItem('ai3_leads') || '[]')
     existing.push({ ...data, timestamp: new Date().toISOString() })
-    localStorage.setItem(key, JSON.stringify(existing))
+    localStorage.setItem('ai3_leads', JSON.stringify(existing))
   } catch { /* silent */ }
 
+  // Submit to Kaifecta CRM
   try {
-    await fetch('https://api.web3forms.com/submit', {
+    const tags = ['ai3-lead', data.source]
+    if (data.interest === 'now') tags.push('now-interest')
+    if (data.interest === 'move') tags.push('move-interest')
+    if (data.interest === 'both') tags.push('now-interest', 'move-interest')
+    if (data.investInterest) tags.push('investor-interest')
+
+    await fetch(KAIFECTA_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + KAIFECTA_API_KEY,
+      },
       body: JSON.stringify({
-        access_key: WEB3FORMS_KEY,
-        subject: 'New AI3 Lead: ' + data.source,
-        to: 'matt@matt-morse.com',
-        from_name: 'AI3 Platform',
-        ...data,
+        email: data.email,
+        name: data.name || '',
+        tags: tags,
+        source: 'makeyourmove.ai/' + data.source,
+        custom_fields: {
+          interest: data.interest || '',
+          invest_interest: data.investInterest ? 'yes' : 'no',
+        },
       }),
     })
-  } catch { /* silent */ }
+  } catch { /* silent - localStorage backup exists */ }
 }

@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { submitLead } from '../lib/notify'
 import { ArrowLeft, Brain, Cpu, Bot, ArrowRight, Check, Zap, Users, Play, CheckCircle2 } from 'lucide-react'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
@@ -181,6 +182,38 @@ const avatarData: Record<string, AvatarData> = {
     result: 'The next generation of businesses won\'t have bigger teams. They\'ll have smarter systems. AI³ is the operating layer that lets a 5-person company operate like a 50-person one.',
     caseStudyName: 'Kaifect',
     caseStudyQuote: 'An AI³ Powered Growth Partner running 50+ clients with AI³ as its operating system. Proving the model works before we ever sold it as a product.',
+  },
+  events: {
+    title: 'Speakers & Event Planners',
+    headline: 'Every audience member\nleaves transformed.',
+    subheadline: 'AI\u00B3 for Events',
+    heroDescription: 'Whether it\'s a conference keynote, a workshop, or a concert. What if every attendee received a personalized experience. Not just the same presentation everyone else got, but insights, resources, and follow-up tailored specifically to them and what they need.',
+    actual: {
+      title: 'Your Message & Vision',
+      points: [
+        'Your keynote, your workshop design, your event vision. This is the foundation.',
+        'AI\u00B3 captures your message and intent so every personalization stays true to your purpose.',
+        'The audience feels like you\'re speaking directly to each of them. Because the system makes it possible.',
+      ],
+    },
+    artificial: {
+      title: 'Personalized Attendee Experience',
+      points: [
+        'Every attendee gets personalized notes, resources, and action items from YOUR presentation.',
+        'Real-time translation so international audiences experience the same impact.',
+        'Post-event content adapted to each attendee\'s role, industry, and goals.',
+      ],
+    },
+    agentic: {
+      title: 'Event Operations on Autopilot',
+      points: [
+        'Pre-event: personalized agendas, logistics, and prep materials for every attendee.',
+        'During: real-time engagement, Q&A management, and session coordination.',
+        'Post-event: automated follow-up, feedback collection, and relationship nurturing.',
+        'Vendor coordination, volunteer management, and logistics running autonomously.',
+      ],
+    },
+    result: 'The best events don\'t just deliver information. They transform people. AI\u00B3 makes that transformation personal for every single attendee, while handling the operational complexity that used to require a team of 50.',
   },
   creator: {
     title: 'Chaotic Creators',
@@ -789,15 +822,7 @@ export default function AvatarPage() {
     if (!email) return
     setLoading(true)
 
-    try {
-      const leads = JSON.parse(localStorage.getItem('ai3_leads') || '[]')
-      leads.push({ email, interest, investInterest, source: slug, timestamp: new Date().toISOString() })
-      localStorage.setItem('ai3_leads', JSON.stringify(leads))
-    } catch {
-      // silent
-    }
-
-    await new Promise(r => setTimeout(r, 600))
+    await submitLead({ source: `avatar-${slug}`, email, interest, investInterest })
     setSubmitted(true)
     setLoading(false)
   }

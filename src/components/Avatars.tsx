@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Church, Trophy, Brain, Briefcase, Mic, GraduationCap } from 'lucide-react'
+import { ArrowRight, Church, Trophy, Brain, Briefcase, Mic, Mic2, GraduationCap } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const avatars = [
@@ -26,6 +26,14 @@ const avatars = [
     hook: 'Run your company with a fleet of AI operators.',
     description: 'Marketing, sales, fulfillment, support — named agents with specific roles that execute your playbook while you focus on what only you can do.',
     gradient: 'from-purple-500 to-violet-500',
+  },
+  {
+    icon: Mic2,
+    title: 'Speakers & Event Planners',
+    slug: 'events',
+    hook: 'Every audience member leaves transformed.',
+    description: 'Conferences, summits, workshops, concerts. Now personalizes every attendee\'s experience before, during, and after the event. Move handles logistics, follow-up, and engagement autonomously.',
+    gradient: 'from-orange-500 to-red-500',
   },
   {
     icon: Trophy,

@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef, type FormEvent } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { submitLead } from '../lib/notify'
 import {
   Play,
   RotateCcw,
@@ -758,14 +759,7 @@ export default function MoveDemo() {
     e.preventDefault()
     if (!email) return
     setFormLoading(true)
-    try {
-      const leads = JSON.parse(localStorage.getItem('ai3_leads') || '[]')
-      leads.push({ email, interest, investInterest, timestamp: new Date().toISOString() })
-      localStorage.setItem('ai3_leads', JSON.stringify(leads))
-    } catch {
-      // silent
-    }
-    await new Promise((r) => setTimeout(r, 600))
+    await submitLead({ source: 'move-demo', email, interest, investInterest })
     setSubmitted(true)
     setFormLoading(false)
   }

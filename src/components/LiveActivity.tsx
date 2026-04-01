@@ -109,7 +109,7 @@ export default function LiveActivity() {
   if (dismissed) return null
 
   return (
-    <div className="fixed bottom-6 left-6 z-50 max-w-xs">
+    <div className="fixed bottom-4 left-4 z-40 max-w-xs sm:max-w-xs max-w-[280px]">
       <AnimatePresence>
         {visible && currentMessage && (
           <motion.div

@@ -76,3 +76,9 @@ body {
 .animate-scroll-left {
   animation: scroll-left 60s linear infinite;
 }
+
+@media (max-width: 640px) {
+  .animate-ticker {
+    font-size: 10px;
+  }
+}

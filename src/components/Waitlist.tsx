@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight, Check } from 'lucide-react'
+import { submitLead } from '../lib/notify'
 
 export default function Waitlist() {
   const [email, setEmail] = useState('')
@@ -14,17 +15,7 @@ export default function Waitlist() {
     if (!email) return
     setLoading(true)
 
-    // Store lead locally + will hook up to backend
-    try {
-      const leads = JSON.parse(localStorage.getItem('ai3_leads') || '[]')
-      leads.push({ email, interest, investInterest, timestamp: new Date().toISOString() })
-      localStorage.setItem('ai3_leads', JSON.stringify(leads))
-    } catch {
-      // silent
-    }
-
-    // Simulate a brief delay for UX
-    await new Promise(r => setTimeout(r, 600))
+    await submitLead({ source: 'waitlist', email, interest, investInterest })
     setSubmitted(true)
     setLoading(false)
   }

@@ -1,5 +1,6 @@
 import { useState, FormEvent } from 'react'
 import { motion } from 'framer-motion'
+import { submitLead } from '../lib/notify'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
@@ -18,7 +19,7 @@ export default function Contact() {
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
 
     const entry: ContactEntry = {
@@ -32,6 +33,8 @@ export default function Contact() {
     const existing: ContactEntry[] = JSON.parse(localStorage.getItem('ai3_contacts') || '[]')
     existing.push(entry)
     localStorage.setItem('ai3_contacts', JSON.stringify(existing))
+
+    await submitLead({ source: 'contact', email, name, interest: subject })
 
     setSubmitted(true)
     setName('')

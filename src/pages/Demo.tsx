@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef, type FormEvent } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { submitLead } from '../lib/notify'
 import {
   MessageSquare,
   Church,
@@ -894,14 +895,7 @@ function BottomCTA() {
     e.preventDefault()
     if (!email) return
     setLoading(true)
-    try {
-      const leads = JSON.parse(localStorage.getItem('ai3_leads') || '[]')
-      leads.push({ email, interest, investInterest, source: 'demo', timestamp: new Date().toISOString() })
-      localStorage.setItem('ai3_leads', JSON.stringify(leads))
-    } catch {
-      // silent
-    }
-    await new Promise((r) => setTimeout(r, 600))
+    await submitLead({ source: 'now-demo', email, interest, investInterest })
     setSubmitted(true)
     setLoading(false)
   }
