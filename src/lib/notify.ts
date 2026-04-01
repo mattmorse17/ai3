@@ -46,7 +46,7 @@ export async function submitLead(data: {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        access_key: 'YOUR_WEB3FORMS_KEY', // placeholder until real key
+        access_key: '1564f845-3e6c-4744-8c4a-1e98966aae18',
         subject: `🟢 New AI³ Lead: ${data.source}`,
         from_name: 'AI³ MakeYourMove.ai',
         email: data.email,
